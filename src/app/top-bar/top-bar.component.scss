@@ -1,0 +1,26 @@
+@import "../../partials/_variables.scss";
+
+.top-bar {
+    background: black;
+    color: $colorWhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 50px;
+
+    .search-container {
+        display: flex;
+        align-items: center;
+        width: 70%;
+
+        fa[name="search"] {
+            padding-right: 10px;
+        }
+
+        input {
+            background: $colorBlack;
+        }
+    }
+}

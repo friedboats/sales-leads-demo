@@ -1,0 +1,6 @@
+$colorBlack: #000000;
+$colorWhite: #ffffff;
+
+$base_font_size: 16px;
+$large: 768px;
+$medium: (($base_font_size/$large)*100) + vw;
