@@ -17,11 +17,13 @@
     .hamburger-menu-icon {
         margin-left: cRems(15px);
         margin-right: cRems(15px);
+        cursor: pointer;
     }
 
     .dashboard-icon {
         margin-left: cRems(15px);
         margin-right: cRems(15px);
+        cursor: pointer;
     }
 
     .search-container {
@@ -31,6 +33,7 @@
         .magnify-icon {
             margin-left: cRems(15px);
             margin-right: cRems(12px);
+            cursor: pointer;
         }
 
         input {
@@ -51,6 +54,7 @@
             height: cRems(16px);
             margin-left: cRems(8px);
             margin-right: cRems(8px);
+            cursor: pointer;
 
             &:last-of-type {
                 transform: rotate(-180deg);
@@ -75,5 +79,6 @@
     .user-icon {
         margin-left: cRems(17px);
         margin-right: cRems(17px);
+        cursor: pointer;
     }
 }
