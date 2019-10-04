@@ -5,5 +5,9 @@
     background: $colorLightGrey;
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-bottom: cRems(20px);
 }
