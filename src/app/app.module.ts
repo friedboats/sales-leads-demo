@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { AccountsPanelComponent } from './accounts-panel/accounts-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    AccountsPanelComponent
   ],
   imports: [
     BrowserModule,

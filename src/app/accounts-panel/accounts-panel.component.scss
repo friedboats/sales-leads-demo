@@ -1,0 +1,41 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.accounts-panel {
+    width: cRems(284px);
+
+    h2 {
+        font-size: cRems(20px);
+        font-weight: 600;
+        padding-top: cRems(24px);
+        padding-bottom: cRems(31px);
+        padding-left: cRems(17px);
+        margin-bottom: 0;
+    }
+
+    .sidebar__item {
+        background: none;
+        padding-left: cRems(17px);
+        height: cRems(52px);
+
+        &.is-current {
+            border-top: 1px solid $colorMedBlue;
+            border-bottom: 1px solid $colorMedBlue;
+            background-color: $colorMedGrey;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px solid $colorMedGrey;
+        }
+    }
+
+    .sidebar__headline {
+        font-size: cRems(14px);
+        line-height: 1.8;
+    }
+
+    .sidebar__info {
+        color: $colorGrey;
+        font-size: cRems(12px);
+    }
+}
