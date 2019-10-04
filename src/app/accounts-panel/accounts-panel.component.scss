@@ -22,6 +22,10 @@
             border-top: 1px solid $colorMedBlue;
             border-bottom: 1px solid $colorMedBlue;
             background-color: $colorMedGrey;
+
+            & + .sidebar__item {
+                border-top: none;
+            }
         }
 
         &:last-of-type {
