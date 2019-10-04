@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent
+    TopBarComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,

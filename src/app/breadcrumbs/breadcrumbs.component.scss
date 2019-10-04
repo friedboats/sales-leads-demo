@@ -1,0 +1,28 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.theme--cutom-blue {
+    .breadcrumbs {
+        background-color: $colorLightBlue;
+        height: cRems(32px);
+    }
+
+    .breadcrumbs__link {
+        background-color: $colorDarkBlue;
+        font-size: cRems(14px);
+
+        &:after {
+            border-left-color: $colorDarkBlue;
+        }
+    }
+
+    .breadcrumbs__item {
+        font-size: cRems(14px);
+
+        .breadcrumbs__link {
+            &:first-child {
+                padding-left: cRems(16px);
+            }
+        }
+    }
+}
