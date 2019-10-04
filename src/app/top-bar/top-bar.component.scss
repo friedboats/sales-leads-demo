@@ -1,4 +1,5 @@
 @import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
 
 .top-bar {
     background: $colorDarkGrey;
@@ -6,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 44px;
+    height: cRems(44px);
 
     .left-column, .right-column {
         display: flex;
@@ -14,13 +15,13 @@
     }
 
     .hamburger-menu-icon {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: cRems(15px);
+        margin-right: cRems(15px);
     }
 
     .dashboard-icon {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: cRems(15px);
+        margin-right: cRems(15px);
     }
 
     .search-container {
@@ -28,14 +29,14 @@
         align-items: center;
 
         .magnify-icon {
-            margin-left: 15px;
-            margin-right: 12px;
+            margin-left: cRems(15px);
+            margin-right: cRems(12px);
         }
 
         input {
             background: $colorDarkGrey;
-            width: 169px;
-            height: 18px;
+            width: cRems(169px);
+            height: cRems(18px);
             padding: 0;
             border: none;
         }
@@ -46,10 +47,10 @@
         align-items: center;
 
         svg {
-            width: 20px;
-            height: 16px;
-            margin-left: 8px;
-            margin-right: 8px;
+            width: cRems(20px);
+            height: cRems(16px);
+            margin-left: cRems(8px);
+            margin-right: cRems(8px);
 
             &:last-of-type {
                 transform: rotate(-180deg);
@@ -58,21 +59,21 @@
         }
 
         .time-selector-txt {
-            font-size: 14px;
+            font-size: cRems(14px);
         }
     }
 
     .problems-indicator {
-        padding-right: 18px;
-        padding-left: 18px;
+        padding-right: cRems(18px);
+        padding-left: cRems(18px);
         background: red;
-        height: 44px;
+        height: cRems(44px);
         display: flex;
         align-items: center;
     }
 
     .user-icon {
-        margin-left: 17px;
-        margin-right: 17px;
+        margin-left: cRems(17px);
+        margin-right: cRems(17px);
     }
 }
