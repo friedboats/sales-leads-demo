@@ -1,0 +1,9 @@
+@import "../partials/_variables.scss";
+@import "../partials/_mixins.scss";
+
+.main-container {
+    background: $colorLightGrey;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}

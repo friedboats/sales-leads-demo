@@ -2,4 +2,8 @@
 @import "../node_modules/@dynatrace/groundhog/dist/css/main.css";
 
 //TODO this is not working here...
-//@import "partials/_variables.scss"
+@import "partials/_variables.scss";
+
+body {
+    background: $colorBlack;
+}
