@@ -1,5 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/@dynatrace/groundhog/dist/css/main.css";
+@import "partials/_variables.scss";
+@import "partials/_mixins.scss";
 
 //TODO this is not working here...
 //@import "partials/_variables.scss"
+
+.panels-container {
+    background: $colorLightGrey;
+    display: flex;
+}
+
+app-sales-leads-panel {
+    width: 100%;
+}

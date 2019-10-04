@@ -8,13 +8,15 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { AccountsPanelComponent } from './accounts-panel/accounts-panel.component';
+import { SalesLeadsPanelComponent } from './sales-leads-panel/sales-leads-panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
     BreadcrumbsComponent,
-    AccountsPanelComponent
+    AccountsPanelComponent,
+    SalesLeadsPanelComponent
   ],
   imports: [
     BrowserModule,

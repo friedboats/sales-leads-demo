@@ -1,0 +1,28 @@
+@import "../../partials/_variables.scss";
+@import "../../partials/_mixins.scss";
+
+.sales-leads-panel {
+    background: $colorWhite;
+    margin-top: cRems(20px);
+    margin-right: cRems(20px);
+    margin-bottom: cRems(20px);
+    padding-top: cRems(20px);
+    padding-right: cRems(20px);
+    padding-bottom: cRems(20px);
+    padding-left: cRems(20px);
+    border-radius: 3px;
+    min-height: cRems(450px);
+    font-size: cRems(14px);
+
+    h2 {
+        font-size: cRems(28px);
+        font-weight: 600;
+        margin-bottom: 0;
+        padding-bottom: cRems(7px);
+    }
+
+    .btn-add-lead {
+        display: block;
+        margin-top: cRems(30px);
+    }
+}
