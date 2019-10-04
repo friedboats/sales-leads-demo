@@ -1,26 +1,78 @@
 @import "../../partials/_variables.scss";
 
 .top-bar {
-    background: black;
+    background: $colorDarkGrey;
     color: $colorWhite;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    height: 50px;
+    height: 44px;
+
+    .left-column, .right-column {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger-menu-icon {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .dashboard-icon {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 
     .search-container {
         display: flex;
         align-items: center;
-        width: 70%;
 
-        fa[name="search"] {
-            padding-right: 10px;
+        .magnify-icon {
+            margin-left: 15px;
+            margin-right: 12px;
         }
 
         input {
-            background: $colorBlack;
+            background: $colorDarkGrey;
+            width: 169px;
+            height: 18px;
+            padding: 0;
+            border: none;
         }
+    }
+
+    .time-selector {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 16px;
+            margin-left: 8px;
+            margin-right: 8px;
+
+            &:last-of-type {
+                transform: rotate(-180deg);
+                opacity: 0.5;
+            }
+        }
+
+        .time-selector-txt {
+            font-size: 14px;
+        }
+    }
+
+    .problems-indicator {
+        padding-right: 18px;
+        padding-left: 18px;
+        background: red;
+        height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .user-icon {
+        margin-left: 17px;
+        margin-right: 17px;
     }
 }
