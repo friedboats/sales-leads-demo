@@ -126,6 +126,11 @@
         }
     }
 
+    .form-btn-container {
+        display: flex;
+        margin-left: auto;
+    }
+
     .btn-delete-x {
         width: cRems(15px);
     }
