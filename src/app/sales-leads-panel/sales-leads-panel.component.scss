@@ -26,4 +26,102 @@
         margin-top: cRems(30px);
         margin-left: auto;
     }
+
+    .sales-leads-list {
+        margin-top: cRems(35px);
+    }
+
+    .column-titles, .row-item    {
+        display: flex;
+        
+        > div {
+            flex: 1;
+        }
+
+        .col-right {
+            justify-content: flex-end;
+            text-align: right;
+        }
+
+        .col-center {
+            justify-content: center;
+            text-align: center;
+        }
+
+        div:first-of-type {
+            padding-left: cRems(13px);
+        }
+
+        .sales-rep {
+            font-weight: bold;
+        }
+    }
+
+    .column-titles {
+        line-height: 0.6;
+        margin-bottom: cRems(8px);
+        font-size: cRems(12px);
+        color: $colorMedBlack;
+        
+        .column-title {
+            display: flex;
+            align-items: flex-end;
+
+            .down-arrow-icon {
+                width: cRems(5.6px);
+                margin-left: cRems(5px);
+            }
+
+            .line-icon {
+                width: 80px;
+            }
+
+            // &:before {
+            //     content: "";
+            //     position: absolute;
+            //     border-bottom: 1px solid red;
+            //     width: 41%;
+            //     left: -40px;
+            //     bottom: -3px;
+            // }
+
+            // &:after {
+            //     content: "";
+            //     position: absolute;
+            //     border-bottom: 1px solid black;
+            //     opacity: 0.15;
+            //     width: 70%;
+            //     bottom: -3px;
+            // }
+
+            // &:first-of-type {
+            //     &:before {
+            //         border-bottom: none;
+            //         width: 0;
+            //         left: 0;
+            //     }
+            // }
+        }
+
+        .flex-space-col {
+           
+        }
+    }
+
+    .row-item {
+        padding-top: cRems(14px);
+        padding-bottom: cRems(7px);
+
+        div:first-of-type {
+            color: $colorMedBlue;
+        }
+
+        &:nth-child(odd) {
+            background-color: $colorLighterGrey;
+        }
+    }
+
+    .btn-delete-x {
+        width: cRems(15px);
+    }
 }
