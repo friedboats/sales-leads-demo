@@ -3,14 +3,15 @@
 @import "partials/_variables.scss";
 @import "partials/_mixins.scss";
 
-//TODO this is not working here...
-//@import "partials/_variables.scss"
-
-.panels-container {
-    background: $colorLightGrey;
-    display: flex;
+body {
+    background: $colorBlack;
 }
 
 app-sales-leads-panel {
     width: 100%;
+}
+
+.panels-container {
+    background: $colorLightGrey;
+    display: flex;
 }

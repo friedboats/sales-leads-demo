@@ -1,0 +1,13 @@
+@import "../partials/_variables.scss";
+@import "../partials/_mixins.scss";
+
+.main-container {
+    background: $colorLightGrey;
+    width: 100%;
+    max-width: 1440px;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-bottom: cRems(20px);
+}
