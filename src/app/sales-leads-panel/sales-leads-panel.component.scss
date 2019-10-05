@@ -28,7 +28,7 @@
     }
 
     .sales-leads-list {
-        margin-top: cRems(35px);
+        margin-top: cRems(30px);
     }
 
     .column-titles, .row-item    {
@@ -52,8 +52,17 @@
             padding-left: cRems(13px);
         }
 
+        .lead-name {
+            flex: 1.2;
+        }
+
         .sales-rep {
             font-weight: bold;
+            flex: 1.6;
+        }
+
+        .delete {
+            flex: 0.5;
         }
     }
 
