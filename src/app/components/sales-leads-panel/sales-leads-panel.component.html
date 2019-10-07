@@ -60,7 +60,8 @@
 
         <app-sales-leads-item 
             *ngFor="let salesLead of salesLeads"
-            [salesLead]="salesLead">
+            [salesLead]="salesLead"
+            (deleteSalesLead)="deleteSalesLead($event)">
 
         </app-sales-leads-item>
     </div>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
@@ -23,7 +24,8 @@ import { SalesLeadsItemComponent } from './components/sales-leads-item/sales-lea
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

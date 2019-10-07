@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { SalesLeadService } from '../../services/sales-lead.service';
+
 import { SalesLead } from '../../models/SalesLead';
 
 @Component({
@@ -7,11 +9,15 @@ import { SalesLead } from '../../models/SalesLead';
   styleUrls: ['./sales-leads-item.component.scss']
 })
 export class SalesLeadsItemComponent implements OnInit {
-  @Input() salesLead: SalesLead
+  @Input() salesLead: SalesLead;
+  @Output() deleteSalesLead: EventEmitter<SalesLead> = new EventEmitter();
 
-  constructor() { }
+  constructor(private salesLeadService:SalesLeadService) { }
 
   ngOnInit() {
   }
 
+  onDelete(salesLead) {
+    this.deleteSalesLead.emit(salesLead);
+  }
 }

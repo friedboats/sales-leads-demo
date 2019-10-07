@@ -10,7 +10,9 @@
     <div class="col-right date">{{ salesLead.leadDate | date:'shortDate' }}</div>
     <div class="flex-space-col hide-sm"></div>
     <div class="col-center delete">
-    <svg class="btn-delete-x" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+    <svg class="btn-delete-x"
+         (click)="onDelete(salesLead)"
+         version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
         <style type="text/css">
             .x-fill{fill:#00A1B2;}
         </style>
