@@ -9,6 +9,7 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { AccountsPanelComponent } from './components/accounts-panel/accounts-panel.component';
 import { SalesLeadsPanelComponent } from './components/sales-leads-panel/sales-leads-panel.component';
+import { SalesLeadsItemComponent } from './components/sales-leads-item/sales-leads-item.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SalesLeadsPanelComponent } from './components/sales-leads-panel/sales-l
     TopBarComponent,
     BreadcrumbsComponent,
     AccountsPanelComponent,
-    SalesLeadsPanelComponent
+    SalesLeadsPanelComponent,
+    SalesLeadsItemComponent
   ],
   imports: [
     BrowserModule,

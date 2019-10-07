@@ -28,7 +28,7 @@
         margin-top: cRems(30px);
     }
 
-    .column-titles, .row-item    {
+    .column-titles    {
         display: flex;
         
         > div {
@@ -113,25 +113,13 @@
         }
     }
 
-    .row-item {
-        padding-top: cRems(14px);
-        padding-bottom: cRems(7px);
-
-        div:first-of-type {
-            color: $colorMedBlue;
-        }
-
-        &:nth-child(odd) {
-            background-color: $colorLighterGrey;
-        }
-    }
-
     .form-btn-container {
         display: flex;
         margin-left: auto;
     }
 
-    .btn-delete-x {
-        width: cRems(15px);
-    }
+    app-sales-leads-item:nth-child(odd) {
+        display: block;
+        background-color: $colorLighterGrey;
+    } 
 }
