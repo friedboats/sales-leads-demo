@@ -5,10 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-import { AccountsPanelComponent } from './accounts-panel/accounts-panel.component';
-import { SalesLeadsPanelComponent } from './sales-leads-panel/sales-leads-panel.component';
+import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
+import { AccountsPanelComponent } from './components/accounts-panel/accounts-panel.component';
+import { SalesLeadsPanelComponent } from './components/sales-leads-panel/sales-leads-panel.component';
 
 @NgModule({
   declarations: [
