@@ -1,98 +1,115 @@
 <div class="sales-leads-panel">
+
+  <!-- Sales List -->
+  <div class="sales-leads-list-container"
+       [hidden]="!showSalesList">
     <h2>Sales leads</h2>
     <span>Showing 5 of 3,498</span>
-    <button role="button" type="button" class="btn btn--primary btn-add-lead">Add lead</button>
+    <button 
+      role="button" 
+      type="button" 
+      class="btn btn--primary btn-add-lead"
+      (click)="addLead()">Add lead</button>
 
     <div class="sales-leads-list">
-        <div class="column-titles">
-            <div class="column-title lead-name">
-                <span>Lead name</span>
-                <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
-                    <style type="text/css">
-                        .arrow-down{fill:#454646;}
-                    </style>
-                    <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
-                </svg>
-            </div>
-            <div class="flex-space-col hide-sm"></div>
-            <div class="column-title sales-rep">
-                <span>Sales Rep</span>
-                <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
-                    <style type="text/css">
-                        .arrow-down{fill:#454646;}
-                    </style>
-                    <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
-                </svg>
-            </div>
-            <div class="flex-space-col hide-sm"></div>
-            <div class="column-title client">
-                <span>Clients</span>
-                <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
-                    <style type="text/css">
-                        .arrow-down{fill:#454646;}
-                    </style>
-                    <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
-                </svg>
-            </div>
-            <div class="flex-space-col hide-sm"></div>
-            <div class="column-title col-right value">
-                <span>Value</span>
-                <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
-                    <style type="text/css">
-                        .arrow-down{fill:#454646;}
-                    </style>
-                    <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
-                </svg>
-            </div>
-            <div class="flex-space-col hide-sm"></div>
-            <div class="column-title col-right date">
-                <span>Date</span>
-                <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
-                    <style type="text/css">
-                        .arrow-down{fill:#454646;}
-                    </style>
-                    <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
-                </svg>
-            </div>
-            <div class="flex-space-col"></div>
-            <div class="column-title col-center delete">Delete</div>
+      <div class="column-titles">
+        <div class="column-title lead-name">
+          <span>Lead name</span>
+          <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+            <style type="text/css">
+              .arrow-down{fill:#454646;}
+            </style>
+            <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+          </svg>
         </div>
-
-        <app-preloader [hidden]="!isLoading"></app-preloader>
-
-        <app-sales-leads-item 
-            [hidden]="isLoading"
-            *ngFor="let salesLead of salesLeads"
-            [salesLead]="salesLead"
-            (deleteSalesLead)="deleteSalesLead($event)">
-
-        </app-sales-leads-item>
-    </div>
-
-
-    <div class="sales-leads-form">
-        <h2>Add sales lead</h2>
-        <span>Enter sales lead information below.</span>
-        
-        <label for="i0" class="label">Lead name</label>
-        <input type="text" class="inputfield" id="i0"/>
-    
-        <label for="i0" class="label">Sales Representative</label>
-        <input type="text" class="inputfield" id="i1"/>
-    
-        <label for="i0" class="label">Client</label>
-        <input type="text" class="inputfield" id="i2"/>
-    
-        <label for="i0" class="label">Value</label>
-        <input type="text" class="inputfield" id="i3"/>
-    
-        <label for="i0" class="label">Date</label>
-        <input type="text" class="inputfield" id="i4"/>
-
-        <div class="form-btn-container">
-            <button role="button" type="button" class="btn btn--secondary btn_cancel">Cancel</button>       
-            <button role="button" type="button" class="btn btn--primary btn-submit">Submit</button>
+        <div class="flex-space-col hide-sm"></div>
+        <div class="column-title sales-rep">
+          <span>Sales Rep</span>
+          <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+            <style type="text/css">
+              .arrow-down{fill:#454646;}
+            </style>
+            <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+          </svg>
         </div>
+        <div class="flex-space-col hide-sm"></div>
+        <div class="column-title client">
+          <span>Clients</span>
+          <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+            <style type="text/css">
+              .arrow-down{fill:#454646;}
+            </style>
+            <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+          </svg>
+        </div>
+        <div class="flex-space-col hide-sm"></div>
+        <div class="column-title col-right value">
+          <span>Value</span>
+          <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+            <style type="text/css">
+              .arrow-down{fill:#454646;}
+            </style>
+            <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+          </svg>
+        </div>
+        <div class="flex-space-col hide-sm"></div>
+        <div class="column-title col-right date">
+          <span>Date</span>
+          <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+            <style type="text/css">
+              .arrow-down{fill:#454646;}
+            </style>
+            <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+          </svg>
+        </div>
+        <div class="flex-space-col"></div>
+        <div class="column-title col-center delete">Delete</div>
+      </div>
+
+      <app-preloader [hidden]="!isLoading"></app-preloader>
+
+      <app-sales-leads-item 
+        [hidden]="isLoading"
+        *ngFor="let salesLead of salesLeads"
+        [salesLead]="salesLead"
+        (deleteSalesLead)="deleteSalesLead($event)">
+      </app-sales-leads-item>
     </div>
+  </div>
+
+  <!-- Sales Form -->
+  <div class="sales-leads-form-container"
+       [hidden]="showSalesList">
+    <h2>Add sales lead</h2>
+    <span>Enter sales lead information below.</span>
+    
+    <label for="i0" class="label">Lead name</label>
+    <input type="text" class="inputfield" id="i0"/>
+
+    <label for="i0" class="label">Sales Representative</label>
+    <input type="text" class="inputfield" id="i1"/>
+
+    <label for="i0" class="label">Client</label>
+    <input type="text" class="inputfield" id="i2"/>
+
+    <label for="i0" class="label">Value</label>
+    <input type="text" class="inputfield" id="i3"/>
+
+    <label for="i0" class="label">Date</label>
+    <input type="text" class="inputfield" id="i4"/>
+
+    <div class="form-btn-container">
+      <button 
+        role="button" 
+        type="button" 
+        class="btn btn--secondary btn_cancel"
+        (click)="cancelForm()">Cancel</button>       
+      <button 
+        role="button" 
+        type="button" 
+        class="btn btn--primary btn-submit"
+        (click)="saveForm()">Save</button>
+    </div>
+  </div>
 
 </div>

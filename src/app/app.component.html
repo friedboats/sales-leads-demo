@@ -1,11 +1,19 @@
 <div class="main-container">
-    <app-top-bar></app-top-bar>
     
-    <app-breadcrumbs></app-breadcrumbs>
+  <!-- Top Bar -->
+  <app-top-bar></app-top-bar>
+  
+  <!-- Breadcrumbs -->
+  <app-breadcrumbs></app-breadcrumbs>
 
-    <div class="panels-container layout is-flex">
-        <app-accounts-panel></app-accounts-panel>
-        
-        <app-sales-leads-panel class="island island--connected"></app-sales-leads-panel>
-    </div>                    
+  <!-- Main Panel -->
+  <div class="panels-container layout is-flex">
+
+    <!-- Accounts Panel -->
+    <app-accounts-panel></app-accounts-panel>
+    
+    <!-- Sales Lead Panel -->
+    <app-sales-leads-panel class="island island--connected"></app-sales-leads-panel>
+  </div>
+
 </div>

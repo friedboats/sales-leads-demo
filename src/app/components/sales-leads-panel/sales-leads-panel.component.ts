@@ -8,19 +8,34 @@ import { SalesLead } from '../../models/SalesLead';
   templateUrl: './sales-leads-panel.component.html',
   styleUrls: ['./sales-leads-panel.component.scss']
 })
-export class SalesLeadsPanelComponent implements OnInit {
-    salesLeads:SalesLead[];
 
-    isLoading:boolean = true;
+export class SalesLeadsPanelComponent implements OnInit {
+  salesLeads:SalesLead[];
+
+  isLoading:boolean = true;
+
+  showSalesList:boolean = true;
 
   constructor(private salesLeadService:SalesLeadService) { }
 
   ngOnInit() {
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
-        this.salesLeads = salesLeads;
+      this.salesLeads = salesLeads;
 
-        this.isLoading = false;
+      this.isLoading = false;
     });
+  }
+
+  addLead() {
+    this.showSalesList = false;
+  }
+
+  saveForm() {
+    console.log("save form");
+  } 
+
+  cancelForm() {
+    this.showSalesList = true;
   }
 
   deleteSalesLead(salesLead:SalesLead) {

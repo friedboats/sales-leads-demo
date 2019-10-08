@@ -2,124 +2,98 @@
 @import "../../../partials/_mixins.scss";
 
 .sales-leads-panel {
-    background: $colorWhite;
-    padding-top: cRems(20px);
-    padding-right: cRems(20px);
-    padding-bottom: cRems(20px);
-    padding-left: cRems(20px);
-    border-radius: 3px;
-    min-height: cRems(450px);
-    font-size: cRems(14px);
+  background: $colorWhite;
+  padding-top: cRems(20px);
+  padding-right: cRems(20px);
+  padding-bottom: cRems(20px);
+  padding-left: cRems(20px);
+  border-radius: 3px;
+  min-height: cRems(450px);
+  font-size: cRems(14px);
 
-    h2 {
-        font-size: cRems(28px);
-        font-weight: 600;
-        margin-bottom: 0;
-        padding-bottom: cRems(7px);
+  h2 {
+    font-size: cRems(28px);
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: cRems(7px);
+  }
+
+  .btn-add-lead {
+    display: block;
+    margin-top: cRems(30px);
+    margin-left: auto;
+  }
+
+  .sales-leads-list {
+    margin-top: cRems(30px);
+  }
+
+  .column-titles    {
+    display: flex;
+    
+    > div {
+      flex: 1;
     }
 
-    .btn-add-lead {
-        display: block;
-        margin-top: cRems(30px);
-        margin-left: auto;
+    .col-right {
+      justify-content: flex-end;
+      text-align: right;
     }
 
-    .sales-leads-list {
-        margin-top: cRems(30px);
+    .col-center {
+      justify-content: center;
+      text-align: center;
     }
 
-    .column-titles    {
-        display: flex;
-        
-        > div {
-            flex: 1;
-        }
-
-        .col-right {
-            justify-content: flex-end;
-            text-align: right;
-        }
-
-        .col-center {
-            justify-content: center;
-            text-align: center;
-        }
-
-        div:first-of-type {
-            padding-left: cRems(13px);
-        }
-
-        .lead-name {
-            flex: 1.2;
-        }
-
-        .sales-rep {
-            font-weight: bold;
-            flex: 1.6;
-        }
-
-        .delete {
-            flex: 0.5;
-        }
+    div:first-of-type {
+      padding-left: cRems(13px);
     }
 
-    .column-titles {
-        line-height: 0.6;
-        margin-bottom: cRems(8px);
-        font-size: cRems(12px);
-        color: $colorMedBlack;
-        
-        .column-title {
-            display: flex;
-            align-items: flex-end;
-
-            .down-arrow-icon {
-                width: cRems(5.6px);
-                margin-left: cRems(5px);
-            }
-
-            .line-icon {
-                width: 80px;
-            }
-
-            // &:before {
-            //     content: "";
-            //     position: absolute;
-            //     border-bottom: 1px solid red;
-            //     width: 41%;
-            //     left: -40px;
-            //     bottom: -3px;
-            // }
-
-            // &:after {
-            //     content: "";
-            //     position: absolute;
-            //     border-bottom: 1px solid black;
-            //     opacity: 0.15;
-            //     width: 70%;
-            //     bottom: -3px;
-            // }
-
-            // &:first-of-type {
-            //     &:before {
-            //         border-bottom: none;
-            //         width: 0;
-            //         left: 0;
-            //     }
-            // }
-        }
-
-        .flex-space-col {
-        }
+    .lead-name {
+      flex: 1.2;
     }
 
-    .form-btn-container {
-        display: flex;
-        margin-left: auto;
+    .sales-rep {
+      font-weight: bold;
+      flex: 1.6;
     }
 
-    app-sales-leads-item:nth-child(odd) {
-        display: block;
-        background-color: $colorLighterGrey;
-    } 
+    .delete {
+      flex: 0.5;
+    }
+  }
+
+  .column-titles {
+    line-height: 0.6;
+    margin-bottom: cRems(8px);
+    font-size: cRems(12px);
+    color: $colorMedBlack;
+    
+    .column-title {
+      display: flex;
+      align-items: flex-end;
+
+      .down-arrow-icon {
+        width: cRems(5.6px);
+        margin-left: cRems(5px);
+      }
+
+      .line-icon {
+        width: 80px;
+      }
+    }
+
+    .flex-space-col {
+    }
+  }
+
+  .form-btn-container {
+    display: flex;
+    margin-left: auto;
+  }
+
+  app-sales-leads-item:nth-child(odd) {
+    display: block;
+    background-color: $colorLighterGrey;
+  } 
 }
