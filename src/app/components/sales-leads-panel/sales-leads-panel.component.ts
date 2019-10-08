@@ -19,11 +19,17 @@ export class SalesLeadsPanelComponent implements OnInit {
   constructor(private salesLeadService:SalesLeadService) { }
 
   ngOnInit() {
+    this.loadSalesLeads();
+  }
+
+  loadSalesLeads() {
+    this.isLoading = true;
+
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
       this.salesLeads = salesLeads;
 
       this.isLoading = false;
-    });
+    });  
   }
 
   addLead() {
@@ -32,10 +38,16 @@ export class SalesLeadsPanelComponent implements OnInit {
 
   saveForm() {
     console.log("save form");
+
+    // TODO on complete, run these lines
+    this.showSalesList = true;
+    this.loadSalesLeads();
   } 
 
   cancelForm() {
     this.showSalesList = true;
+
+    this.loadSalesLeads();
   }
 
   deleteSalesLead(salesLead:SalesLead) {
