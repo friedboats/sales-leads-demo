@@ -11,11 +11,15 @@ import { SalesLead } from '../../models/SalesLead';
 export class SalesLeadsPanelComponent implements OnInit {
     salesLeads:SalesLead[];
 
+    isLoading:boolean = true;
+
   constructor(private salesLeadService:SalesLeadService) { }
 
-  ngOnInit() {   
+  ngOnInit() {
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
         this.salesLeads = salesLeads;
+
+        this.isLoading = false;
     });
   }
 

@@ -58,7 +58,10 @@
             <div class="column-title col-center delete">Delete</div>
         </div>
 
+        <app-preloader [hidden]="!isLoading"></app-preloader>
+
         <app-sales-leads-item 
+            [hidden]="isLoading"
             *ngFor="let salesLead of salesLeads"
             [salesLead]="salesLead"
             (deleteSalesLead)="deleteSalesLead($event)">

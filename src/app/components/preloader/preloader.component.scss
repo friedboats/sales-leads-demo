@@ -1,0 +1,15 @@
+@import "../../../partials/_variables.scss";
+@import "../../../partials/_mixins.scss";
+
+.preloader-container {
+    width: 100%;
+    min-height: cRems(400px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .preloader {
+        font-weight: bold;
+        font-size: cRems(20px);
+    }
+}
