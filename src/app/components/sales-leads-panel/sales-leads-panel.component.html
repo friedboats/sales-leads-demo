@@ -9,7 +9,7 @@
       role="button" 
       type="button" 
       class="btn btn--primary btn-add-lead"
-      (click)="addLead()">
+      (click)="showSalesLeadsForm()">
       Add lead
     </button>
 
@@ -22,7 +22,8 @@
     <span class="instructions">Enter sales lead information below.</span>
     
     <app-sales-leads-form
-      (addSalesLead)="addSalesLead($event)">
+      (addSalesLead)="addSalesLead($event)"
+      (canceled)="showSalesLeadsList()">
     </app-sales-leads-form>
   
   </div>

@@ -27,6 +27,7 @@ export class SalesLeadsListComponent implements OnInit {
 
     // Subscribe to when the form makes a successful post so we can update our compontent with the new data
     this.salesLeadService.salesLeadPostSuccessful.subscribe(() => {
+      console.log("I HEARD YOU POST MAN");
       this.loadSalesLeads();
     });
   }
@@ -36,6 +37,9 @@ export class SalesLeadsListComponent implements OnInit {
 
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
       this.salesLeads = salesLeads;
+
+      // TODO this is blank ONLY when I have deleted the list, added a new sales lead and return to the list page, but is not blank when I have not deleted everything
+      console.log(salesLeads);
       this.isLoading = false;
     });  
   }

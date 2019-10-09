@@ -17,8 +17,12 @@ export class SalesLeadsPanelComponent implements OnInit {
   }
 
   // show
-  addLead() {
+  showSalesLeadsForm() {
     this.showSalesList = false;
+  }
+
+  showSalesLeadsList() {
+    this.showSalesList = true;
   }
 
   addSalesLead($event) {

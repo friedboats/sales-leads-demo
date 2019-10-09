@@ -8,9 +8,14 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class SalesLeadsFormComponent implements OnInit {
   @Output() addSalesLead: EventEmitter<any> = new EventEmitter();
+  @Output() canceled: EventEmitter<any> = new EventEmitter();
+
 
   registerForm: FormGroup;
   submitted = false;
+
+  // TODO Put in special errors for leadAmount and leadDate
+  // TODO Clear form when loading this state
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -39,10 +44,18 @@ export class SalesLeadsFormComponent implements OnInit {
 
     const formParams = this.registerForm.value;
     this.addSalesLead.emit(formParams);
+    
+    this.submitted = false;
+    this.clearForm();
   }
 
-  onReset() {
-      this.submitted = false;
-      this.registerForm.reset();
+  onCancel() {
+    this.clearForm();
+    this.canceled.emit();
+  }
+
+  clearForm() {
+    this.submitted = false;
+    this.registerForm.reset();
   }
 }
