@@ -28,6 +28,9 @@ export class SalesLeadsPanelComponent implements OnInit {
   addSalesLead($event) {
     this.salesLeadService.addSalesLead($event).subscribe(() => {
       this.showSalesList = true;
+
+      // emit this out to all components
+      this.salesLeadService.salesLeadPostSuccessful.emit(true);
     });
   }
 }

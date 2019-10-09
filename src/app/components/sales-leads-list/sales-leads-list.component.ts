@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { SalesLeadService } from '../../services/sales-lead.service';
 
 import { SalesLead } from '../../models/SalesLead';
+import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-sales-leads-list',
@@ -22,12 +23,19 @@ export class SalesLeadsListComponent implements OnInit {
     }
   }
 
+  /* get salesLeadsArray() {
+    if(this.salesLeads) {
+      return this.salesLeads;
+    }
+  } */
+
   ngOnInit() {
     this.loadSalesLeads();
 
     // Subscribe to when the form makes a successful post so we can update our compontent with the new data
     this.salesLeadService.salesLeadPostSuccessful.subscribe(() => {
       console.log("I HEARD YOU POST MAN");
+      
       this.loadSalesLeads();
     });
   }
@@ -38,7 +46,10 @@ export class SalesLeadsListComponent implements OnInit {
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
       this.salesLeads = salesLeads;
 
-      // TODO this is blank ONLY when I have deleted the list, added a new sales lead and return to the list page, but is not blank when I have not deleted everything
+      // TODO this is not showing the updated list from the server, even though I am making a new call
+      // I tried making a getter for the array to help (think computed property) cause it worked for salesLeadsPopulated
+      // But I don't think that is going to help b/c the problem is that salesLeads is returned without the new sales lead info I just added in the previous move.
+      // SOLUTION: see setTimeout above. Seems like a race condition
       console.log(salesLeads);
       this.isLoading = false;
     });  

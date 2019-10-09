@@ -28,9 +28,6 @@ export class SalesLeadService {
   addSalesLead(data):Observable<any> {
     const url = this.salesLeadsUrl;
     
-    // emit this out to all components
-    this.salesLeadPostSuccessful.emit(true);
-
     return this.http.post<any>(url, data, httpOptions);
   }
 
