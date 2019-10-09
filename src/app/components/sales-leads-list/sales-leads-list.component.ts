@@ -45,8 +45,6 @@ export class SalesLeadsListComponent implements OnInit {
     // If one of the ids in salesLeads matches the id to be deleted, then delete it
     this.salesLeads = this.salesLeads.filter(lead => lead.id !== salesLead.id);
 
-    console.log(this.salesLeads);
-
     // Delete from server
     // TODO tried to delete from UI after the response came back, but salesLead was undefined
     this.salesLeadService.deleteSalesLead(salesLead).subscribe();
