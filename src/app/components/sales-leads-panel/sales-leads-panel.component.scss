@@ -33,6 +33,16 @@
     margin-left: cRems(5px);
   }
 
+  .table th:before, .table thead th:before, .table thead td:before,
+  .table th:after, .table thead th:after, .table thead td:after {
+    content: none;
+  }
+
+  .table th {
+    padding-bottom: 8px;
+    border-bottom: 1px solid $colorMedGrey;
+  }
+
   tbody {
     .lead-name-col {
       color: $colorMedBlue;
@@ -65,14 +75,16 @@
     }
   }
 
-  .table th:before, .table thead th:before, .table thead td:before,
-  .table th:after, .table thead th:after, .table thead td:after {
-    content: none;
-  }
+  .btn-show-more {
+    text-align: center;
 
-  .table th {
-    padding-bottom: 8px;
-    border-bottom: 1px solid $colorMedGrey;
+    fa {
+      display: block;
+      color: $colorMedBlue;
+      font-size: cRems(28px);
+      font-weight: bold;
+      line-height: 1;
+    }
   }
 
   /////
