@@ -4,19 +4,37 @@
 .sales-leads-form-container {
   max-width: cRems(500px);
 
+  .input-container {
+    margin-bottom: cRems(12px);
+  }
+
   label {
     padding-bottom: cRems(2px);
   }
 
   input {
-    margin-bottom: cRems(12px);
+    margin-bottom: cRems(4px);
+
+    &.is-invalid {
+      border-color: $colorRed;
+    }
+  }
+
+  .is-invalid, 
+  .invalid-feedback {
+    color: $colorRed;
+  }
+
+  .invalid-feedback {
+    font-size: cRems(10px);
+    text-align: right;
   }
 }
 
 .form-btn-container {
   display: flex;
   justify-content: flex-end;
-  margin-top: cRems(12px);
+  margin-top: cRems(20px);
   margin-left: auto;
 
   .btn-cancel {

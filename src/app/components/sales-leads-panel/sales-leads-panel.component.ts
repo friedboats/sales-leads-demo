@@ -19,7 +19,7 @@ export class SalesLeadsPanelComponent implements OnInit {
     this.showSalesList = false;
   }
 
-  saveForm() {
+  /* saveForm() {
     console.log("save form");
 
     // TODO on complete, run these lines
@@ -34,5 +34,5 @@ export class SalesLeadsPanelComponent implements OnInit {
     
     // TODO you have to learn how to send an event out for this
     //this.loadSalesLeads();
-  }
+  } */
 }
