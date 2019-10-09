@@ -51,7 +51,7 @@
       </thead>
       <tbody [hidden]="isLoading">
         <tr
-          *ngFor="let salesLead of salesLeadsArray">
+          *ngFor="let salesLead of salesLeads">
           <td data-th="Lead name" class="lead-name-col">{{ salesLead.leadName }}</td>
           <td data-th="Sales Rep" class="sales-rep-col">{{ salesLead.salesRep }}</td>
           <td data-th="Clients" class="clents-col">{{ salesLead.clientName }}</td>

@@ -23,12 +23,6 @@ export class SalesLeadsListComponent implements OnInit {
     }
   }
 
-  get salesLeadsArray() {
-    if(this.salesLeads) {
-      return this.salesLeads;
-    }
-  }
-
   ngOnInit() {
     this.loadSalesLeads();
 
@@ -49,7 +43,6 @@ export class SalesLeadsListComponent implements OnInit {
 
   deleteSalesLead(salesLead:SalesLead) {
     // Delete from server
-    // TODO tried to delete from UI after the response came back, but salesLead was undefined
     this.salesLeadService.deleteSalesLead(salesLead).subscribe(() => {
       // Delete from UI
       // If one of the ids in salesLeads matches the id to be deleted, then delete it
