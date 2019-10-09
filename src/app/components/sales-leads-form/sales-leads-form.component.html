@@ -2,133 +2,133 @@
   <h2>Add sales lead</h2>
   <span class="instructions">Enter sales lead information below.</span>
 
-</div>
-<form class="sales-leads-form-container"
-      [formGroup]="registerForm" 
-      (ngSubmit)="onSubmit()">
-  
-  <!-- Lead name -->
-  <div class="input-container">
-    <label 
-      for="i0" 
-      class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.leadName.errors }">
-      Lead name
-    </label>
-    <input 
-      formControlName="leadName" 
-      type="text" 
-      class="inputfield form-control" 
-      id="i0"
-      [ngClass]="{ 'is-invalid': submitted && f.leadName.errors }"/>
-
-    <!-- Error message -->
-    <div *ngIf="submitted && f.leadName.errors" class="invalid-feedback">
-      <div *ngIf="f.leadName.errors.required">
-        Full Name is required
-      </div>
-    </div>
-  </div>
-
-  <!-- Sales rep -->
-  <div class="input-container">
-    <label 
-      for="i1" 
-      class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }">
-      Sales Representative
-    </label>
-    <input 
-      formControlName="salesRep" 
-      type="text" 
-      class="inputfield form-control" 
-      id="i1"
-      [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }"/>
-
-    <!-- Error message -->
-    <div *ngIf="submitted && f.salesRep.errors" class="invalid-feedback">
-      <div *ngIf="f.salesRep.errors.required">
-        Sales representative is required
-      </div>
-    </div>
-  </div>
-
-  <!-- Client -->
-  <div class="input-container">
-    <label 
-      for="i2" 
-      class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }">
-      Client
-    </label>
-    <input 
-      formControlName="clientName" 
-      type="text" 
-      class="inputfield form-control" 
-      id="i2"
-      [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }"/>
-
-    <!-- Error message -->
-    <div *ngIf="submitted && f.clientName.errors" class="invalid-feedback">
-      <div *ngIf="f.clientName.errors.required">
-        Client is required
-      </div>
-    </div>
-  </div>
-
-  <div class="input-container">
-    <label 
-      for="i3" 
-      class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }">
-      Value
-    </label>
-    <input 
-      formControlName="leadAmount" 
-      type="text" 
-      class="inputfield form-control" 
-      id="i3"
-      [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }"/>
+  <form class="sales-leads-form-container"
+        [formGroup]="registerForm" 
+        (ngSubmit)="onSubmit()">
     
-    <!-- Error message -->
-    <div *ngIf="submitted && f.leadAmount.errors" class="invalid-feedback">
-      <div *ngIf="f.leadAmount.errors.required">
-        Value is required
+    <!-- Lead name -->
+    <div class="input-container">
+      <label 
+        for="i0" 
+        class="label"
+        [ngClass]="{ 'is-invalid': submitted && f.leadName.errors }">
+        Lead name
+      </label>
+      <input 
+        formControlName="leadName" 
+        type="text" 
+        class="inputfield form-control" 
+        id="i0"
+        [ngClass]="{ 'is-invalid': submitted && f.leadName.errors }"/>
+
+      <!-- Error message -->
+      <div *ngIf="submitted && f.leadName.errors" class="invalid-feedback">
+        <div *ngIf="f.leadName.errors.required">
+          Full Name is required
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="input-container">
-    <label 
-      for="i4" 
-      class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }">
-      Date
-    </label>
-    <input 
-      formControlName="leadDate" 
-      type="text" 
-      class="inputfield form-control" 
-      id="i4"
-      [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }"/>
+    <!-- Sales rep -->
+    <div class="input-container">
+      <label 
+        for="i1" 
+        class="label"
+        [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }">
+        Sales Representative
+      </label>
+      <input 
+        formControlName="salesRep" 
+        type="text" 
+        class="inputfield form-control" 
+        id="i1"
+        [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }"/>
 
-    <!-- Error message -->
-    <div *ngIf="submitted && f.leadDate.errors" class="invalid-feedback">
-      <div *ngIf="f.leadDate.errors.required">
-        Date is required
+      <!-- Error message -->
+      <div *ngIf="submitted && f.salesRep.errors" class="invalid-feedback">
+        <div *ngIf="f.salesRep.errors.required">
+          Sales representative is required
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="form-btn-container">
-    <button 
-      role="button" 
-      type="reset" 
-      class="btn btn--secondary btn-cancel"
-      (click)="onCancel()">Cancel</button>       
-    <button 
-      role="button" 
-      type="submit" 
-      class="btn btn--primary btn-submit">Save</button>
-  </div>
-</form>
+    <!-- Client -->
+    <div class="input-container">
+      <label 
+        for="i2" 
+        class="label"
+        [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }">
+        Client
+      </label>
+      <input 
+        formControlName="clientName" 
+        type="text" 
+        class="inputfield form-control" 
+        id="i2"
+        [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }"/>
+
+      <!-- Error message -->
+      <div *ngIf="submitted && f.clientName.errors" class="invalid-feedback">
+        <div *ngIf="f.clientName.errors.required">
+          Client is required
+        </div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label 
+        for="i3" 
+        class="label"
+        [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }">
+        Value
+      </label>
+      <input 
+        formControlName="leadAmount" 
+        type="text" 
+        class="inputfield form-control" 
+        id="i3"
+        [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }"/>
+      
+      <!-- Error message -->
+      <div *ngIf="submitted && f.leadAmount.errors" class="invalid-feedback">
+        <div *ngIf="f.leadAmount.errors.required">
+          Value is required
+        </div>
+      </div>
+    </div>
+
+    <div class="input-container">
+      <label 
+        for="i4" 
+        class="label"
+        [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }">
+        Date
+      </label>
+      <input 
+        formControlName="leadDate" 
+        type="text" 
+        class="inputfield form-control" 
+        id="i4"
+        [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }"/>
+
+      <!-- Error message -->
+      <div *ngIf="submitted && f.leadDate.errors" class="invalid-feedback">
+        <div *ngIf="f.leadDate.errors.required">
+          Date is required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-btn-container">
+      <button 
+        role="button" 
+        type="reset" 
+        class="btn btn--secondary btn-cancel"
+        (click)="onCancel()">Cancel</button>       
+      <button 
+        role="button" 
+        type="submit" 
+        class="btn btn--primary btn-submit">Save</button>
+    </div>
+  </form>
+</div>
