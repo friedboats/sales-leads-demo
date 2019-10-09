@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
 // TODO add alias
+// TODO add CSS processors
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';

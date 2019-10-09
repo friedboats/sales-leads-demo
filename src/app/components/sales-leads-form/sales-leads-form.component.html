@@ -11,7 +11,7 @@
       <label 
         for="i0" 
         class="label"
-        [ngClass]="{ 'is-invalid': submitted && f.leadName.errors }">
+        [ngClass]="{ 'is-invalid': submitAttempted && f.leadName.errors }">
         Lead name
       </label>
       <input 
@@ -19,10 +19,10 @@
         type="text" 
         class="inputfield form-control" 
         id="i0"
-        [ngClass]="{ 'is-invalid': submitted && f.leadName.errors }"/>
+        [ngClass]="{ 'is-invalid': submitAttempted && f.leadName.errors }"/>
 
       <!-- Error message -->
-      <div *ngIf="submitted && f.leadName.errors" class="invalid-feedback">
+      <div *ngIf="submitAttempted && f.leadName.errors" class="invalid-feedback">
         <div *ngIf="f.leadName.errors.required">
           Full Name is required
         </div>
@@ -34,7 +34,7 @@
       <label 
         for="i1" 
         class="label"
-        [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }">
+        [ngClass]="{ 'is-invalid': submitAttempted && f.salesRep.errors }">
         Sales Representative
       </label>
       <input 
@@ -42,10 +42,10 @@
         type="text" 
         class="inputfield form-control" 
         id="i1"
-        [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }"/>
+        [ngClass]="{ 'is-invalid': submitAttempted && f.salesRep.errors }"/>
 
       <!-- Error message -->
-      <div *ngIf="submitted && f.salesRep.errors" class="invalid-feedback">
+      <div *ngIf="submitAttempted && f.salesRep.errors" class="invalid-feedback">
         <div *ngIf="f.salesRep.errors.required">
           Sales representative is required
         </div>
@@ -57,7 +57,7 @@
       <label 
         for="i2" 
         class="label"
-        [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }">
+        [ngClass]="{ 'is-invalid': submitAttempted && f.clientName.errors }">
         Client
       </label>
       <input 
@@ -65,21 +65,22 @@
         type="text" 
         class="inputfield form-control" 
         id="i2"
-        [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }"/>
+        [ngClass]="{ 'is-invalid': submitAttempted && f.clientName.errors }"/>
 
       <!-- Error message -->
-      <div *ngIf="submitted && f.clientName.errors" class="invalid-feedback">
+      <div *ngIf="submitAttempted && f.clientName.errors" class="invalid-feedback">
         <div *ngIf="f.clientName.errors.required">
           Client is required
         </div>
       </div>
     </div>
 
+    <!-- Lead amount -->
     <div class="input-container">
       <label 
         for="i3" 
         class="label"
-        [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }">
+        [ngClass]="{ 'is-invalid': submitAttempted && f.leadAmount.errors }">
         Value
       </label>
       <input 
@@ -87,21 +88,22 @@
         type="text" 
         class="inputfield form-control" 
         id="i3"
-        [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }"/>
+        [ngClass]="{ 'is-invalid': submitAttempted && f.leadAmount.errors }"/>
       
       <!-- Error message -->
-      <div *ngIf="submitted && f.leadAmount.errors" class="invalid-feedback">
+      <div *ngIf="submitAttempted && f.leadAmount.errors" class="invalid-feedback">
         <div *ngIf="f.leadAmount.errors.required">
           Value is required
         </div>
       </div>
     </div>
 
+    <!-- Lead date -->
     <div class="input-container">
       <label 
         for="i4" 
         class="label"
-        [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }">
+        [ngClass]="{ 'is-invalid': submitAttempted && f.leadDate.errors }">
         Date
       </label>
       <input 
@@ -109,23 +111,28 @@
         type="text" 
         class="inputfield form-control" 
         id="i4"
-        [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }"/>
+        [ngClass]="{ 'is-invalid': submitAttempted && f.leadDate.errors }"/>
 
       <!-- Error message -->
-      <div *ngIf="submitted && f.leadDate.errors" class="invalid-feedback">
+      <div *ngIf="submitAttempted && f.leadDate.errors" class="invalid-feedback">
         <div *ngIf="f.leadDate.errors.required">
           Date is required
         </div>
       </div>
     </div>
 
+    <!-- Form buttons -->
     <div class="form-btn-container">
+      <!-- Cancel -->
       <button 
+        [disabled]="submitInProgress"
         role="button" 
         type="reset" 
         class="btn btn--secondary btn-cancel"
-        (click)="onCancel()">Cancel</button>       
-      <button 
+        (click)="onCancel()">Cancel</button>     
+      <!-- Save -->
+      <button
+        [disabled]="submitInProgress"
         role="button" 
         type="submit" 
         class="btn btn--primary btn-submit">Save</button>
