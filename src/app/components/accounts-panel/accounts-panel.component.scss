@@ -7,8 +7,8 @@
     h2 {
         font-size: cRems(20px);
         font-weight: 600;
-        padding-top: cRems(24px);
-        padding-bottom: cRems(31px);
+        padding-top: cRems(22px);
+        padding-bottom: cRems(28px);
         padding-left: cRems(17px);
         margin-bottom: 0;
     }
@@ -22,6 +22,11 @@
             border-top: 1px solid $colorMedBlue;
             border-bottom: 1px solid $colorMedBlue;
             background-color: $colorMedGrey;
+
+            .sidebar__headline {
+              color: $colorMedBlue;
+              font-weight: bold;
+            }
 
             & + .sidebar__item {
                 border-top: none;
