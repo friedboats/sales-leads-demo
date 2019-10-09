@@ -6,7 +6,7 @@
   <div class="sales-leads-list-container"
        [hidden]="!showSalesList">
     <h2>Sales leads</h2>
-    <span>Showing {{ salesLeads.length }} of {{ salesLeads.length }}</span>
+    <span>Showing {{ salesLeads && salesLeads.length }} of {{ salesLeads && salesLeads.length }}</span>
     <button 
       role="button" 
       type="button" 
