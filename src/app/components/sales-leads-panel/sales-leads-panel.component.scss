@@ -1,7 +1,6 @@
 @import "../../../partials/_variables.scss";
 @import "../../../partials/_mixins.scss";
 
-
 .sales-leads-panel {
   background: $colorWhite;
   padding-top: cRems(19px);
@@ -25,33 +24,9 @@
     margin-top: cRems(30px);
     margin-left: auto;
   }
-}
-
-// Sales leads form
-.sales-leads-form-container {
-  max-width: cRems(500px);
 
   .instructions {
     margin-bottom: 25px;
     display: block;
-  }
-
-  label {
-    padding-bottom: cRems(2px);
-  }
-
-  input {
-    margin-bottom: cRems(12px);
-  }
-}
-
-.form-btn-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: cRems(12px);
-  margin-left: auto;
-
-  .btn-cancel {
-    margin-right: cRems(7px);
   }
 }

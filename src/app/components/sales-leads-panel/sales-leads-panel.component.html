@@ -14,38 +14,9 @@
   </div>
 
   <!-- Sales Form -->
-  <div class="sales-leads-form-container"
-       [hidden]="showSalesList">
+  <div [hidden]="showSalesList">
     <h2>Add sales lead</h2>
     <span class="instructions">Enter sales lead information below.</span>
-    
-    <label for="i0" class="label">Lead name</label>
-    <input type="text" class="inputfield" id="i0"/>
-
-    <label for="i0" class="label">Sales Representative</label>
-    <input type="text" class="inputfield" id="i1"/>
-
-    <label for="i0" class="label">Client</label>
-    <input type="text" class="inputfield" id="i2"/>
-
-    <label for="i0" class="label">Value</label>
-    <input type="text" class="inputfield" id="i3"/>
-
-    <label for="i0" class="label">Date</label>
-    <input type="text" class="inputfield" id="i4"/>
-
-    <div class="form-btn-container">
-      <button 
-        role="button" 
-        type="button" 
-        class="btn btn--secondary btn-cancel"
-        (click)="cancelForm()">Cancel</button>       
-      <button 
-        role="button" 
-        type="button" 
-        class="btn btn--primary btn-submit"
-        (click)="saveForm()">Save</button>
-    </div>
+    <app-sales-leads-form></app-sales-leads-form>
   </div>
-
 </div>
