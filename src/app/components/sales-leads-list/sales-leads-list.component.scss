@@ -31,13 +31,11 @@ tbody {
 }
 
 .delete-col {
-  text-align: center;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  text-align: left;
+  padding-top: cRems(14px);
 
   @include breakpointUp(920px) {
-    justify-content: center;
+    text-align: center;
   }
   
   .btn-delete {
