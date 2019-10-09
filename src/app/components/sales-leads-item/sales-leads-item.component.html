@@ -1,4 +1,4 @@
-<div class="row-item">
+<!-- <div class="row-item">
     <div class="lead-name">{{ salesLead.leadName }}</div>
     <div class="flex-space-col hide-sm"></div>
     <div class="sales-rep">{{ salesLead.salesRep }}</div>
@@ -19,4 +19,23 @@
         <polygon class="x-fill" points="15,2.3 12.7,0 7.5,5.2 2.3,0 0,2.3 5.2,7.5 0,12.7 2.3,15 7.5,9.8 12.7,15 15,12.7 9.8,7.5 "/>
     </svg>
     </div>
-</div>
+</div> -->
+
+
+<tr>
+  <td data-th="Lead name">{{ salesLead.leadName }}</td>
+  <td data-th="Sales Rep">{{ salesLead.salesRep }}</td>
+  <td data-th="Clients">{{ salesLead.clientName }}</td>
+  <td data-th="Value">{{ salesLead.leadAmount }}</td>
+  <td data-th="Date">{{ salesLead.leadDate | date:'shortDate' }}</td>
+  <td data-th="Delete">
+    <svg class="btn-delete-x"
+      (click)="onDelete(salesLead)"
+      version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+      <style type="text/css">
+          .x-fill{fill:#00A1B2;}
+      </style>
+      <polygon class="x-fill" points="15,2.3 12.7,0 7.5,5.2 2.3,0 0,2.3 5.2,7.5 0,12.7 2.3,15 7.5,9.8 12.7,15 15,12.7 9.8,7.5 "/>
+    </svg>
+  </td>
+</tr>
