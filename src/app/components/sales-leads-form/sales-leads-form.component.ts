@@ -15,7 +15,6 @@ export class SalesLeadsFormComponent implements OnInit {
   submitted = false;
 
   // TODO Put in special errors for leadAmount and leadDate
-  // TODO Clear form when loading this state
 
   constructor(private formBuilder: FormBuilder) { }
 

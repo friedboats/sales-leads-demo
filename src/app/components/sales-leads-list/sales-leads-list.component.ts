@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { SalesLeadService } from '../../services/sales-lead.service';
 
 import { SalesLead } from '../../models/SalesLead';
@@ -11,6 +11,8 @@ import { setTimeout } from 'timers';
 })
 
 export class SalesLeadsListComponent implements OnInit {
+  @Output() addLeadClick: EventEmitter<any> = new EventEmitter();
+
   salesLeads:SalesLead[];
 
   isLoading:boolean = true;
@@ -30,6 +32,10 @@ export class SalesLeadsListComponent implements OnInit {
     this.salesLeadService.salesLeadPostSuccessful.subscribe(() => {      
       this.loadSalesLeads();
     });
+  }
+
+  btnAddLeadClicked() {
+    this.addLeadClick.emit();
   }
 
   loadSalesLeads() {

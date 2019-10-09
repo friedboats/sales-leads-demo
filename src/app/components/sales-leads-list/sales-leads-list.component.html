@@ -1,5 +1,15 @@
 <!-- Sales List -->
 <div class="sales-leads-list-container">
+  <h2>Sales leads</h2>
+  <span>Showing {{ salesLeads && salesLeads.length }} of {{ salesLeads && salesLeads.length }}</span>
+  <button 
+    role="button" 
+    type="button" 
+    class="btn btn--primary btn-add-lead"
+    (click)="btnAddLeadClicked()">
+    Add lead
+  </button>
+    
   <div class="sales-leads-list">
 
     <!-- Table -->

@@ -10,23 +10,4 @@
   border-radius: 3px;
   min-height: cRems(950px);
   font-size: cRems(14px);
-
-  h2 {
-    font-size: cRems(28px);
-    font-weight: 600;
-    margin-bottom: 0;
-    padding-bottom: cRems(3px);
-  }
-
-  // Sales leads list
-  .btn-add-lead {
-    display: block;
-    margin-top: cRems(30px);
-    margin-left: auto;
-  }
-
-  .instructions {
-    margin-bottom: 25px;
-    display: block;
-  }
 }

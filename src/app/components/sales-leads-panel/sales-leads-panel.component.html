@@ -1,26 +1,14 @@
-<div 
-  class="sales-leads-panel">
+<div class="sales-leads-panel">
 
   <!-- Sales leads list -->
   <div [hidden]="!showSalesList">
-    <h2>Sales leads</h2>
-    <span>Showing {{ salesLeads && salesLeads.length }} of {{ salesLeads && salesLeads.length }}</span>
-    <button 
-      role="button" 
-      type="button" 
-      class="btn btn--primary btn-add-lead"
-      (click)="showSalesLeadsForm()">
-      Add lead
-    </button>
-
-    <app-sales-leads-list></app-sales-leads-list>
+    <app-sales-leads-list
+      (addLeadClick)="showSalesLeadsForm()">
+    </app-sales-leads-list>
   </div>
 
   <!-- Sales Form -->
-  <div [hidden]="showSalesList">
-    <h2>Add sales lead</h2>
-    <span class="instructions">Enter sales lead information below.</span>
-    
+  <div [hidden]="showSalesList">    
     <app-sales-leads-form
       (addSalesLead)="addSalesLead($event)"
       (canceled)="showSalesLeadsList()">

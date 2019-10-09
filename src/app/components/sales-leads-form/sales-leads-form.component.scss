@@ -4,6 +4,13 @@
 .sales-leads-form-container {
   max-width: cRems(500px);
 
+  h2 {
+    font-size: cRems(28px);
+    font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: cRems(3px);
+  }
+
   .input-container {
     margin-bottom: cRems(12px);
   }
