@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SalesLeadService } from '../../services/sales-lead.service';
-
-import { SalesLead } from '../../models/SalesLead';
 
 @Component({
   selector: 'app-sales-leads-panel',
@@ -10,11 +7,10 @@ import { SalesLead } from '../../models/SalesLead';
 })
 
 export class SalesLeadsPanelComponent implements OnInit {
-  salesLeads:SalesLead[];
 
   showSalesList:boolean = true;
 
-  constructor(private salesLeadService:SalesLeadService) { }
+  constructor() { }
 
   ngOnInit() {
   }
