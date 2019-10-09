@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -14,6 +14,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SalesLeadService {
+  salesLeadPostSuccessful: EventEmitter<any> = new EventEmitter();
+
   salesLeadsUrl:string = 'https://9hw9h6hka3.execute-api.us-east-2.amazonaws.com/dev/leads';
 
   constructor(private http:HttpClient) { }
@@ -25,6 +27,10 @@ export class SalesLeadService {
 
   addSalesLead(data):Observable<any> {
     const url = this.salesLeadsUrl;
+    
+    // emit this out to all components
+    this.salesLeadPostSuccessful.emit(true);
+
     return this.http.post<any>(url, data, httpOptions);
   }
 

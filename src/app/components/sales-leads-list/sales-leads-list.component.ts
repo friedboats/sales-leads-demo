@@ -8,10 +8,9 @@ import { SalesLead } from '../../models/SalesLead';
   templateUrl: './sales-leads-list.component.html',
   styleUrls: ['./sales-leads-list.component.scss']
 })
+
 export class SalesLeadsListComponent implements OnInit {
   salesLeads:SalesLead[];
-
-  data:Object;
 
   isLoading:boolean = true;
 
@@ -19,6 +18,11 @@ export class SalesLeadsListComponent implements OnInit {
 
   ngOnInit() {
     this.loadSalesLeads();
+
+    // Subscribe to when the form makes a successful post so we can update our compontent with the new data
+    this.salesLeadService.salesLeadPostSuccessful.subscribe(() => {
+      this.loadSalesLeads();
+    });
   }
 
   loadSalesLeads() {

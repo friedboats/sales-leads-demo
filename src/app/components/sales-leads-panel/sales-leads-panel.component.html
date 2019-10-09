@@ -6,10 +6,12 @@
     <h2>Sales leads</h2>
     <span>Showing {{ salesLeads && salesLeads.length }} of {{ salesLeads && salesLeads.length }}</span>
     <button 
-    role="button" 
-    type="button" 
-    class="btn btn--primary btn-add-lead"
-    (click)="addLead()">Add lead</button>
+      role="button" 
+      type="button" 
+      class="btn btn--primary btn-add-lead"
+      (click)="addLead()">
+      Add lead
+    </button>
 
     <app-sales-leads-list></app-sales-leads-list>
   </div>
