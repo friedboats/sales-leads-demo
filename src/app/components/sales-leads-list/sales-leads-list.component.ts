@@ -32,13 +32,10 @@ export class SalesLeadsListComponent implements OnInit {
   }
 
   loadSalesLeads() {
-    console.log("loadSalesLeads");
     this.isLoading = true;
 
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
       this.salesLeads = salesLeads;
-
-      console.log(this.salesLeads.length);
       this.isLoading = false;
     });  
   }
