@@ -32,10 +32,13 @@ tbody {
 
 .delete-col {
   text-align: left;
-  padding-top: cRems(14px);
 
   @include breakpointUp(920px) {
     text-align: center;
+  }
+
+  td {
+    padding-top: cRems(14px);
   }
   
   .btn-delete {
