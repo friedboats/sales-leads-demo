@@ -10,7 +10,6 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
 import { AccountsPanelComponent } from './components/accounts-panel/accounts-panel.component';
 import { SalesLeadsPanelComponent } from './components/sales-leads-panel/sales-leads-panel.component';
-import { SalesLeadsItemComponent } from './components/sales-leads-item/sales-leads-item.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
     BreadcrumbsComponent,
     AccountsPanelComponent,
     SalesLeadsPanelComponent,
-    SalesLeadsItemComponent,
     PreloaderComponent
   ],
   imports: [
