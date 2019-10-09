@@ -61,3 +61,11 @@ tbody {
     line-height: 1;
   }
 }
+
+.no-results {
+  width: 100%;
+  min-height: cRems(200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

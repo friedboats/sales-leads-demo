@@ -72,11 +72,19 @@
     </table>
 
     <!-- Preloader -->
-    <app-preloader [hidden]="!isLoading"></app-preloader>
+    <app-preloader *ngIf="isLoading"></app-preloader>
 
-    <div class="btn-show-more">
+    <div 
+      class="btn-show-more"
+      *ngIf="salesLeadsPopulated">
       <a href="#">Show 50 More</a>
       <fa name="angle-down"></fa>
+    </div>
+
+    <div 
+      class="no-results"
+      *ngIf="!salesLeadsPopulated">
+      <div>No sales leads found.</div>
     </div>
 
   </div>

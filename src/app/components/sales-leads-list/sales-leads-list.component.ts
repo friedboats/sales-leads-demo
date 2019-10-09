@@ -16,6 +16,12 @@ export class SalesLeadsListComponent implements OnInit {
 
   constructor(private salesLeadService:SalesLeadService) { }
 
+  get salesLeadsPopulated() {
+    if(this.salesLeads) {
+      return this.salesLeads.length > 0;
+    }
+  }
+
   ngOnInit() {
     this.loadSalesLeads();
 
@@ -26,18 +32,23 @@ export class SalesLeadsListComponent implements OnInit {
   }
 
   loadSalesLeads() {
+    console.log("loadSalesLeads");
     this.isLoading = true;
 
     this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
       this.salesLeads = salesLeads;
 
+      console.log(this.salesLeads.length);
       this.isLoading = false;
     });  
   }
 
   deleteSalesLead(salesLead:SalesLead) {
     // Delete from UI
+    // If one of the ids in salesLeads matches the id to be deleted, then delete it
     this.salesLeads = this.salesLeads.filter(lead => lead.id !== salesLead.id);
+
+    console.log(this.salesLeads);
 
     // Delete from server
     // TODO tried to delete from UI after the response came back, but salesLead was undefined
