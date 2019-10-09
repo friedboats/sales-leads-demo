@@ -30,7 +30,7 @@
     <label 
       for="i1" 
       class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.salesRepresentative.errors }">
+      [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }">
       Sales Representative
     </label>
     <input 
@@ -38,11 +38,11 @@
       type="text" 
       class="inputfield form-control" 
       id="i1"
-      [ngClass]="{ 'is-invalid': submitted && f.salesRepresentative.errors }"/>
+      [ngClass]="{ 'is-invalid': submitted && f.salesRep.errors }"/>
 
     <!-- Error message -->
-    <div *ngIf="submitted && f.salesRepresentative.errors" class="invalid-feedback">
-      <div *ngIf="f.salesRepresentative.errors.required">
+    <div *ngIf="submitted && f.salesRep.errors" class="invalid-feedback">
+      <div *ngIf="f.salesRep.errors.required">
         Sales representative is required
       </div>
     </div>
@@ -53,7 +53,7 @@
     <label 
       for="i2" 
       class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.client.errors }">
+      [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }">
       Client
     </label>
     <input 
@@ -61,11 +61,11 @@
       type="text" 
       class="inputfield form-control" 
       id="i2"
-      [ngClass]="{ 'is-invalid': submitted && f.client.errors }"/>
+      [ngClass]="{ 'is-invalid': submitted && f.clientName.errors }"/>
 
     <!-- Error message -->
-    <div *ngIf="submitted && f.client.errors" class="invalid-feedback">
-      <div *ngIf="f.client.errors.required">
+    <div *ngIf="submitted && f.clientName.errors" class="invalid-feedback">
+      <div *ngIf="f.clientName.errors.required">
         Client is required
       </div>
     </div>
@@ -75,7 +75,7 @@
     <label 
       for="i3" 
       class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.value.errors }">
+      [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }">
       Value
     </label>
     <input 
@@ -83,11 +83,11 @@
       type="text" 
       class="inputfield form-control" 
       id="i3"
-      [ngClass]="{ 'is-invalid': submitted && f.value.errors }"/>
+      [ngClass]="{ 'is-invalid': submitted && f.leadAmount.errors }"/>
     
     <!-- Error message -->
-    <div *ngIf="submitted && f.value.errors" class="invalid-feedback">
-      <div *ngIf="f.value.errors.required">
+    <div *ngIf="submitted && f.leadAmount.errors" class="invalid-feedback">
+      <div *ngIf="f.leadAmount.errors.required">
         Value is required
       </div>
     </div>
@@ -97,7 +97,7 @@
     <label 
       for="i4" 
       class="label"
-      [ngClass]="{ 'is-invalid': submitted && f.date.errors }">
+      [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }">
       Date
     </label>
     <input 
@@ -105,11 +105,11 @@
       type="text" 
       class="inputfield form-control" 
       id="i4"
-      [ngClass]="{ 'is-invalid': submitted && f.date.errors }"/>
+      [ngClass]="{ 'is-invalid': submitted && f.leadDate.errors }"/>
 
     <!-- Error message -->
-    <div *ngIf="submitted && f.date.errors" class="invalid-feedback">
-      <div *ngIf="f.date.errors.required">
+    <div *ngIf="submitted && f.leadDate.errors" class="invalid-feedback">
+      <div *ngIf="f.leadDate.errors.required">
         Date is required
       </div>
     </div>
