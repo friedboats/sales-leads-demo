@@ -68,7 +68,7 @@
             <td data-th="Lead name" class="lead-name-col">{{ salesLead.leadName }}</td>
             <td data-th="Sales Rep" class="sales-rep-col">{{ salesLead.salesRep }}</td>
             <td data-th="Clients" class="clents-col">{{ salesLead.clientName }}</td>
-            <td data-th="Value" class="value-col">{{ salesLead.leadAmount }}</td>
+            <td data-th="Value" class="value-col">${{ salesLead.leadAmount | number }}</td>
             <td data-th="Date" class="date-col">{{ salesLead.leadDate | date:'shortDate' }}</td>
             <td data-th="Delete" class="delete-col">
               <svg class="btn-delete"
