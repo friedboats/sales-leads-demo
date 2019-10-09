@@ -24,12 +24,15 @@ export class SalesLeadsPanelComponent implements OnInit {
 
     // TODO on complete, run these lines
     this.showSalesList = true;
+
+    // TODO you have to learn how to send an event out for this
     //this.loadSalesLeads();
   } 
 
   cancelForm() {
     this.showSalesList = true;
-
+    
+    // TODO you have to learn how to send an event out for this
     //this.loadSalesLeads();
   }
 }
