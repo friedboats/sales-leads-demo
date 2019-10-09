@@ -1,4 +1,5 @@
-<div class="sales-leads-panel">
+<div 
+  class="sales-leads-panel">
 
   <!-- Sales leads list -->
   <div [hidden]="!showSalesList">
@@ -17,6 +18,10 @@
   <div [hidden]="showSalesList">
     <h2>Add sales lead</h2>
     <span class="instructions">Enter sales lead information below.</span>
-    <app-sales-leads-form></app-sales-leads-form>
+    
+    <app-sales-leads-form
+      (addSalesLead)="addSalesLead($event)">
+    </app-sales-leads-form>
+  
   </div>
 </div>

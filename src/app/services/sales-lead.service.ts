@@ -14,13 +14,18 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SalesLeadService {
-    salesLeadsUrl:string = 'https://9hw9h6hka3.execute-api.us-east-2.amazonaws.com/dev/leads';
+  salesLeadsUrl:string = 'https://9hw9h6hka3.execute-api.us-east-2.amazonaws.com/dev/leads';
 
   constructor(private http:HttpClient) { }
 
   // Get Sales Leads
   getSalesLeads():Observable<SalesLead[]> {
     return this.http.get<SalesLead[]>(this.salesLeadsUrl);
+  }
+
+  addSalesLead(data):Observable<any> {
+    const url = this.salesLeadsUrl;
+    return this.http.post<any>(url, data, httpOptions);
   }
 
   deleteSalesLead(salesLead: SalesLead):Observable<SalesLead> {

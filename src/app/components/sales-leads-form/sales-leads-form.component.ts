@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./sales-leads-form.component.scss']
 })
 export class SalesLeadsFormComponent implements OnInit {
+  @Output() addSalesLead: EventEmitter<any> = new EventEmitter();
+
   registerForm: FormGroup;
   submitted = false;
 
@@ -17,10 +19,10 @@ export class SalesLeadsFormComponent implements OnInit {
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
       leadName: ['', Validators.required],
-      salesRepresentative: ['', Validators.required],
-      client: ['', Validators.required],
-      value: ['', Validators.required],
-      date: ['', Validators.required]
+      salesRep: ['', Validators.required],
+      clientName: ['', Validators.required],
+      leadAmount: ['', Validators.required],
+      leadDate: ['', Validators.required]
     });
   }
 
@@ -35,8 +37,12 @@ export class SalesLeadsFormComponent implements OnInit {
         return;
     }
 
+    const formParams = this.registerForm.value;
+    console.log("submitting");
+    this.addSalesLead.emit(formParams);
+
     // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    //alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
   onReset() {

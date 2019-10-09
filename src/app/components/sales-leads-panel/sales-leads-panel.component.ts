@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SalesLeadService } from '@services/sales-lead.service';
 
 @Component({
   selector: 'app-sales-leads-panel',
@@ -10,13 +11,26 @@ export class SalesLeadsPanelComponent implements OnInit {
 
   showSalesList:boolean = true;
 
-  constructor() { }
+  constructor(private salesLeadService:SalesLeadService) { }
 
   ngOnInit() {
   }
 
+  // show
   addLead() {
     this.showSalesList = false;
+  }
+
+  addSalesLead($event) {
+    console.log("Event heard");
+    console.log($event);
+    
+    this.salesLeadService.addSalesLead($event).subscribe(() => {
+      console.log("POSTED!");
+      console.log($event);
+
+      this.showSalesList = true;
+    });
   }
 
   /* saveForm() {

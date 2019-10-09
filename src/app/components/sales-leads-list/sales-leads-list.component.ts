@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { SalesLeadService } from '../../services/sales-lead.service';
 
 import { SalesLead } from '../../models/SalesLead';
@@ -10,6 +10,8 @@ import { SalesLead } from '../../models/SalesLead';
 })
 export class SalesLeadsListComponent implements OnInit {
   salesLeads:SalesLead[];
+
+  data:Object;
 
   isLoading:boolean = true;
 
