@@ -1,15 +1,20 @@
 @import "../../../partials/_variables.scss";
 @import "../../../partials/_mixins.scss";
 
+h2 {
+  font-size: cRems(28px);
+  font-weight: 600;
+  margin-bottom: 0;
+  padding-bottom: cRems(3px);
+}
+
+.instructions {
+  margin-bottom: 25px;
+  display: block;
+}
+
 .sales-leads-form-container {
   max-width: cRems(500px);
-
-  h2 {
-    font-size: cRems(28px);
-    font-weight: 600;
-    margin-bottom: 0;
-    padding-bottom: cRems(3px);
-  }
 
   .input-container {
     margin-bottom: cRems(12px);
