@@ -1,0 +1,65 @@
+@import "../../../partials/_variables.scss";
+@import "../../../partials/_mixins.scss";
+
+.sales-leads-list {
+  margin-top: cRems(30px);
+}
+
+.down-arrow-icon {
+  width: cRems(5.6px);
+  margin-left: cRems(5px);
+}
+
+.table th:before, .table thead th:before, .table thead td:before,
+.table th:after, .table thead th:after, .table thead td:after {
+  content: none;
+}
+
+.table th {
+  padding-bottom: 8px;
+  border-bottom: 1px solid $colorMedGrey;
+}
+
+tbody {
+  .lead-name-col {
+    color: $colorMedBlue;
+  }
+}
+
+.sales-rep-col {
+  font-weight: bold;
+}
+
+.delete-col {
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @include breakpointUp(920px) {
+    justify-content: center;
+  }
+  
+  .btn-delete {
+    width: cRems(15px);
+    cursor: pointer;
+  }
+}
+
+.value-col, .date-col {
+  @include breakpointUp(920px) {
+    text-align: right;
+  }
+}
+
+.btn-show-more {
+  text-align: center;
+
+  fa {
+    display: block;
+    color: $colorMedBlue;
+    font-size: cRems(28px);
+    font-weight: bold;
+    line-height: 1;
+  }
+}

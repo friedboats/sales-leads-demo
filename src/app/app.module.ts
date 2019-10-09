@@ -12,6 +12,7 @@ import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.compo
 import { AccountsPanelComponent } from './components/accounts-panel/accounts-panel.component';
 import { SalesLeadsPanelComponent } from './components/sales-leads-panel/sales-leads-panel.component';
 import { PreloaderComponent } from './components/preloader/preloader.component';
+import { SalesLeadsListComponent } from './components/sales-leads-list/sales-leads-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
     BreadcrumbsComponent,
     AccountsPanelComponent,
     SalesLeadsPanelComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    SalesLeadsListComponent
   ],
   imports: [
     BrowserModule,

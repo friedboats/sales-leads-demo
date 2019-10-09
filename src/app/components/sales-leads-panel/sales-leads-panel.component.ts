@@ -12,24 +12,11 @@ import { SalesLead } from '../../models/SalesLead';
 export class SalesLeadsPanelComponent implements OnInit {
   salesLeads:SalesLead[];
 
-  isLoading:boolean = true;
-
   showSalesList:boolean = true;
 
   constructor(private salesLeadService:SalesLeadService) { }
 
   ngOnInit() {
-    this.loadSalesLeads();
-  }
-
-  loadSalesLeads() {
-    this.isLoading = true;
-
-    this.salesLeadService.getSalesLeads().subscribe(salesLeads => {
-      this.salesLeads = salesLeads;
-
-      this.isLoading = false;
-    });  
   }
 
   addLead() {
@@ -41,21 +28,12 @@ export class SalesLeadsPanelComponent implements OnInit {
 
     // TODO on complete, run these lines
     this.showSalesList = true;
-    this.loadSalesLeads();
+    //this.loadSalesLeads();
   } 
 
   cancelForm() {
     this.showSalesList = true;
 
-    this.loadSalesLeads();
-  }
-
-  deleteSalesLead(salesLead:SalesLead) {
-    // Delete from UI
-    this.salesLeads = this.salesLeads.filter(lead => lead.id !== salesLead.id);
-
-    // Delete from server
-    // TODO tried to delete from UI after the response came back, but salesLead was undefined
-    this.salesLeadService.deleteSalesLead(salesLead).subscribe();
+    //this.loadSalesLeads();
   }
 }

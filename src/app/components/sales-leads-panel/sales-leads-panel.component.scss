@@ -1,6 +1,7 @@
 @import "../../../partials/_variables.scss";
 @import "../../../partials/_mixins.scss";
 
+
 .sales-leads-panel {
   background: $colorWhite;
   padding-top: cRems(19px);
@@ -24,96 +25,33 @@
     margin-top: cRems(30px);
     margin-left: auto;
   }
+}
 
-  .sales-leads-list {
-    margin-top: cRems(30px);
+// Sales leads form
+.sales-leads-form-container {
+  max-width: cRems(500px);
+
+  .instructions {
+    margin-bottom: 25px;
+    display: block;
   }
 
-  .down-arrow-icon {
-    width: cRems(5.6px);
-    margin-left: cRems(5px);
+  label {
+    padding-bottom: cRems(2px);
   }
 
-  .table th:before, .table thead th:before, .table thead td:before,
-  .table th:after, .table thead th:after, .table thead td:after {
-    content: none;
+  input {
+    margin-bottom: cRems(12px);
   }
+}
 
-  .table th {
-    padding-bottom: 8px;
-    border-bottom: 1px solid $colorMedGrey;
-  }
+.form-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: cRems(12px);
+  margin-left: auto;
 
-  tbody {
-    .lead-name-col {
-      color: $colorMedBlue;
-    }
-  }
-
-  .sales-rep-col {
-    font-weight: bold;
-  }
-
-  .delete-col {
-    text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    @include breakpointUp(920px) {
-      justify-content: center;
-    }
-    
-    .btn-delete {
-      width: cRems(15px);
-      cursor: pointer;
-    }
-  }
-
-  .value-col, .date-col {
-    @include breakpointUp(920px) {
-      text-align: right;
-    }
-  }
-
-  .btn-show-more {
-    text-align: center;
-
-    fa {
-      display: block;
-      color: $colorMedBlue;
-      font-size: cRems(28px);
-      font-weight: bold;
-      line-height: 1;
-    }
-  }
-
-  // Sales leads form
-  .sales-leads-form-container {
-    max-width: cRems(500px);
-
-    .instructions {
-      margin-bottom: 25px;
-      display: block;
-    }
-  
-    label {
-      padding-bottom: cRems(2px);
-    }
-
-    input {
-      margin-bottom: cRems(12px);
-    }
-  }
-  
-  .form-btn-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: cRems(12px);
-    margin-left: auto;
-
-    .btn-cancel {
-      margin-right: cRems(7px);
-    }
+  .btn-cancel {
+    margin-right: cRems(7px);
   }
 }

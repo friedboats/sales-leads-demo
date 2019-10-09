@@ -1,0 +1,83 @@
+<!-- Sales List -->
+<div class="sales-leads-list-container">
+  <div class="sales-leads-list">
+
+    <!-- Table -->
+    <table class="table table--responsive">
+      <thead>
+        <tr>
+          <th class="lead-name-col">Lead name 
+            <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+              <style type="text/css">
+                .arrow-down{fill:#454646;}
+              </style>
+              <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+            </svg>
+          </th>
+          <th class="sales-rep-col">Sales Rep
+            <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+              <style type="text/css">
+                .arrow-down{fill:#454646;}
+              </style>
+              <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+            </svg>
+          </th>
+          <th class="clents-col">Clients
+            <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+              <style type="text/css">
+                .arrow-down{fill:#454646;}
+              </style>
+              <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+            </svg>
+          </th>
+          <th class="value-col">Value
+            <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+              <style type="text/css">
+                .arrow-down{fill:#454646;}
+              </style>
+              <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+            </svg>
+          </th>
+          <th class="date-col">Date
+            <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
+              <style type="text/css">
+                .arrow-down{fill:#454646;}
+              </style>
+              <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
+            </svg>
+          </th>
+          <th class="delete-col">Delete</th>
+        </tr>
+      </thead>
+      <tbody [hidden]="isLoading">
+        <tr
+          *ngFor="let salesLead of salesLeads">
+          <td data-th="Lead name" class="lead-name-col">{{ salesLead.leadName }}</td>
+          <td data-th="Sales Rep" class="sales-rep-col">{{ salesLead.salesRep }}</td>
+          <td data-th="Clients" class="clents-col">{{ salesLead.clientName }}</td>
+          <td data-th="Value" class="value-col">${{ salesLead.leadAmount | number }}</td>
+          <td data-th="Date" class="date-col">{{ salesLead.leadDate | date:'shortDate' }}</td>
+          <td data-th="Delete" class="delete-col">
+            <svg class="btn-delete"
+              (click)="deleteSalesLead(salesLead)"
+              version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+              <style type="text/css">
+                  .x-fill{fill:#00A1B2;}
+              </style>
+              <polygon class="x-fill" points="15,2.3 12.7,0 7.5,5.2 2.3,0 0,2.3 5.2,7.5 0,12.7 2.3,15 7.5,9.8 12.7,15 15,12.7 9.8,7.5 "/>
+            </svg>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Preloader -->
+    <app-preloader [hidden]="!isLoading"></app-preloader>
+
+    <div class="btn-show-more">
+      <a href="#">Show 50 More</a>
+      <fa name="angle-down"></fa>
+    </div>
+
+  </div>
+</div>
