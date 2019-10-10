@@ -5,9 +5,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { SalesLead } from '../models/SalesLead';
 
 const httpOptions = {
-    headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-    })
+  // Header type
+  headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+  })
 }
 
 @Injectable({
@@ -27,12 +28,14 @@ export class SalesLeadService {
     return this.http.get<SalesLead[]>(this.salesLeadsUrl);
   }
 
+  // Add Sales Leads
   addSalesLead(data):Observable<any> {
     const url = this.salesLeadsUrl;
     
     return this.http.post<any>(url, data, httpOptions);
   }
 
+  // Delete Sales Leads
   deleteSalesLead(salesLead: SalesLead):Observable<SalesLead> {
     const url = `${this.salesLeadsUrl}/${salesLead.id}`;
     return this.http.delete<SalesLead>(url, httpOptions);

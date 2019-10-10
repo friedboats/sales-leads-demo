@@ -21,7 +21,8 @@ export class SalesLeadsFormComponent implements OnInit {
   submitInProgress = false;
 
   constructor(private formBuilder: FormBuilder, private salesLeadService:SalesLeadService) { }
-
+  
+  // Component init
   ngOnInit() {
     // Form validation
     this.registerForm = this.formBuilder.group({
@@ -53,25 +54,26 @@ export class SalesLeadsFormComponent implements OnInit {
 
     this.submitInProgress = true;
 
-    // Emit form params to the parent for actual submission
+    // Make service call to post sales lead
     const formParams = this.registerForm.value;
     this.salesLeadService.addSalesLead(formParams).subscribe(() => {
       this.submitAttempted = false;
       this.clearForm();
   
-      // emit this out to all components
+      // emit this out to all components to let them know that the sales lead was successful
       this.salesLeadService.salesLeadPostSuccessful.emit(true);
     });
   }
 
+  // On cancel click
   onCancel() {
     this.clearForm();
     this.canceled.emit();
   }
 
+  // Clear form and reset
   clearForm() {
     this.submitAttempted = false;
-    //this.submitInProgress = false;
     this.registerForm.reset();
   }
 }

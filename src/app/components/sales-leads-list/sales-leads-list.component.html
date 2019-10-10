@@ -2,6 +2,8 @@
 <div class="sales-leads-list-container">
   <h2>Sales leads</h2>
   <span>Showing {{ salesLeads && salesLeads.length }} of {{ salesLeads && salesLeads.length }}</span>
+  
+  <!-- Add sales lead button -->
   <button 
     role="button" 
     type="button" 
@@ -10,12 +12,14 @@
     Add lead
   </button>
     
+  <!-- Sales lead list -->
   <div class="sales-leads-list">
-
     <!-- Table -->
     <table class="table table--responsive">
+      <!-- Headers -->
       <thead>
         <tr>
+          <!-- Lead name -->
           <th class="lead-name-col">Lead name 
             <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
               <style type="text/css">
@@ -24,6 +28,7 @@
               <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
             </svg>
           </th>
+          <!-- Sales rep -->
           <th class="sales-rep-col">Sales Rep
             <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
               <style type="text/css">
@@ -32,6 +37,7 @@
               <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
             </svg>
           </th>
+          <!-- Clients -->
           <th class="clents-col">Clients
             <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
               <style type="text/css">
@@ -40,6 +46,7 @@
               <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
             </svg>
           </th>
+          <!-- Value -->
           <th class="value-col">Value
             <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
               <style type="text/css">
@@ -48,6 +55,7 @@
               <polygon class="arrow-down" points="0,0 2.8,4.8 5.7,0 "/>
             </svg>
           </th>
+          <!-- Date -->
           <th class="date-col">Date
             <svg class="down-arrow-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.7 4.8" style="enable-background:new 0 0 5.7 4.8;" xml:space="preserve">
               <style type="text/css">
@@ -59,6 +67,7 @@
           <th class="delete-col">Delete</th>
         </tr>
       </thead>
+      <!-- Rows -->
       <tbody [hidden]="isLoading">
         <tr
           *ngFor="let salesLead of salesLeads">
@@ -84,6 +93,7 @@
     <!-- Preloader -->
     <app-preloader *ngIf="isLoading"></app-preloader>
 
+    <!-- Show more button -->
     <div 
       class="btn-show-more"
       *ngIf="salesLeadsPopulated">
@@ -91,6 +101,7 @@
       <fa name="angle-down"></fa>
     </div>
 
+    <!-- No results message -->
     <div 
       class="no-results"
       *ngIf="!salesLeadsPopulated">

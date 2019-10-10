@@ -2,83 +2,89 @@
 @import "../../../partials/_mixins.scss";
 
 .top-bar {
-    background: $colorDarkGrey;
-    color: $colorWhite;
+  background: $colorDarkGrey;
+  color: $colorWhite;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: cRems(44px);
+
+  .left-column, .right-column {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+  }
+
+  .hamburger-menu-icon {
+    margin-left: cRems(15px);
+    margin-right: cRems(15px);
+    cursor: pointer;
+  }
+
+  .dashboard-icon {
+    cursor: pointer;
+    margin-left: cRems(15px);
+    margin-right: cRems(15px);
+    min-width: (16px);
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+
+    .magnify-icon {
+      margin-left: cRems(15px);
+      margin-right: cRems(12px);
+      min-width: (16px);;
+      cursor: pointer;
+    }
+
+    input {
+      background: $colorDarkGrey;
+      width: 100%;
+      height: cRems(18px);
+      padding: 0;
+      border: none;
+
+      @include breakpointUp(520px) {
+        width: cRems(169px);
+      }
+    }
+  }
+
+  .time-selector {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: cRems(20px);
+      height: cRems(16px);
+      margin-left: cRems(8px);
+      margin-right: cRems(8px);
+      cursor: pointer;
+
+      &:last-of-type {
+          transform: rotate(-180deg);
+          opacity: 0.5;
+      }
+    }
+
+    .time-selector-txt {
+      font-size: cRems(14px);
+    }
+  }
+
+  .problems-indicator {
+    padding-right: cRems(18px);
+    padding-left: cRems(18px);
+    background: $colorRed;
     height: cRems(44px);
+    display: flex;
+    align-items: center;
+  }
 
-    .left-column, .right-column {
-        display: flex;
-        align-items: center;
-    }
-
-    .hamburger-menu-icon {
-        margin-left: cRems(15px);
-        margin-right: cRems(15px);
-        cursor: pointer;
-    }
-
-    .dashboard-icon {
-        margin-left: cRems(15px);
-        margin-right: cRems(15px);
-        cursor: pointer;
-    }
-
-    .search-container {
-        display: flex;
-        align-items: center;
-
-        .magnify-icon {
-            margin-left: cRems(15px);
-            margin-right: cRems(12px);
-            cursor: pointer;
-        }
-
-        input {
-            background: $colorDarkGrey;
-            width: cRems(169px);
-            height: cRems(18px);
-            padding: 0;
-            border: none;
-        }
-    }
-
-    .time-selector {
-        display: flex;
-        align-items: center;
-
-        svg {
-            width: cRems(20px);
-            height: cRems(16px);
-            margin-left: cRems(8px);
-            margin-right: cRems(8px);
-            cursor: pointer;
-
-            &:last-of-type {
-                transform: rotate(-180deg);
-                opacity: 0.5;
-            }
-        }
-
-        .time-selector-txt {
-            font-size: cRems(14px);
-        }
-    }
-
-    .problems-indicator {
-        padding-right: cRems(18px);
-        padding-left: cRems(18px);
-        background: $colorRed;
-        height: cRems(44px);
-        display: flex;
-        align-items: center;
-    }
-
-    .user-icon {
-        margin-left: cRems(17px);
-        margin-right: cRems(17px);
-        cursor: pointer;
-    }
+  .user-icon {
+    margin-left: cRems(17px);
+    margin-right: cRems(17px);
+    cursor: pointer;
+  }
 }
