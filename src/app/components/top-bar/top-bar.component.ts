@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.scss']
 })
 
-// TODO manage navigation based on state
-
 export class TopBarComponent implements OnInit {
 
   constructor() { }

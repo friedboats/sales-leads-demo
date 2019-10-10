@@ -1,13 +1,33 @@
 <div class="theme--cutom-blue">
-    <ul class="breadcrumbs">
-        <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#noop">Accounts</a>
-        </li>
-        <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="#noop">Sales leads</a>
-        </li>
-        <li class="breadcrumbs__item">
-        <span class="breadcrumbs__last">Add sales lead</span>
-        </li>
-    </ul>
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item">
+      <a 
+        class="breadcrumbs__link" 
+        href="#">
+        Accounts
+      </a>
+    </li>
+    <li class="breadcrumbs__item">
+      <a 
+        class="breadcrumbs__link" 
+        href="#"
+        (click)="!salesLeadsClick()"
+        *ngIf="!listSelected">
+        Sales leads
+      </a>
+      <span 
+        class="breadcrumbs__last"
+        *ngIf="listSelected">
+        Sales leads
+      </span>
+    </li>
+    <li 
+      class="breadcrumbs__item"
+      *ngIf="!listSelected">
+      <span 
+        class="breadcrumbs__last">
+        Add sales lead
+      </span>
+    </li>
+  </ul>
 </div>

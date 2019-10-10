@@ -13,8 +13,10 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class SalesLeadService {
   salesLeadPostSuccessful: EventEmitter<any> = new EventEmitter();
+  showSalesList: EventEmitter<any> = new EventEmitter();
 
   salesLeadsUrl:string = 'https://9hw9h6hka3.execute-api.us-east-2.amazonaws.com/dev/leads';
 

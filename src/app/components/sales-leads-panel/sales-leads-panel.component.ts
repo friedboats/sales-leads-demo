@@ -14,15 +14,17 @@ export class SalesLeadsPanelComponent implements OnInit {
   constructor(private salesLeadService:SalesLeadService) { }
 
   ngOnInit() {
+    this.salesLeadService.showSalesList.subscribe((bool) => {      
+      this.showSalesList = bool;
+    });
   }
 
-  // show
   showSalesLeadsForm() {
-    this.showSalesList = false;
+    this.salesLeadService.showSalesList.emit(false);
   }
 
   showSalesLeadsList() {
-    this.showSalesList = true;
+    this.salesLeadService.showSalesList.emit(true);
   }
 
   addSalesLead($event) {
