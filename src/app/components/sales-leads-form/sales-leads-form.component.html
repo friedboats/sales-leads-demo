@@ -85,7 +85,7 @@
       </label>
       <input 
         formControlName="leadAmount" 
-        type="text" 
+        type="number" 
         class="inputfield form-control" 
         id="i3"
         [ngClass]="{ 'is-invalid': submitAttempted && f.leadAmount.errors }"/>
@@ -117,6 +117,9 @@
       <div *ngIf="submitAttempted && f.leadDate.errors" class="invalid-feedback">
         <div *ngIf="f.leadDate.errors.required">
           Date is required
+        </div>
+        <div *ngIf="f.leadDate.errors.pattern">
+          Date is not ISO (ex: 2019-05-10T16:32:57.000Z)
         </div>
       </div>
     </div>
