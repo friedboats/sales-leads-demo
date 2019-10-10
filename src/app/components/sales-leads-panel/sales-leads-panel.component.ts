@@ -17,6 +17,10 @@ export class SalesLeadsPanelComponent implements OnInit {
     this.salesLeadService.showSalesList.subscribe((bool) => {      
       this.showSalesList = bool;
     });
+
+    this.salesLeadService.salesLeadPostSuccessful.subscribe(() => {      
+      this.showSalesList = true;
+    });
   }
 
   showSalesLeadsForm() {
@@ -27,12 +31,4 @@ export class SalesLeadsPanelComponent implements OnInit {
     this.salesLeadService.showSalesList.emit(true);
   }
 
-  addSalesLead($event) {
-    this.salesLeadService.addSalesLead($event).subscribe(() => {
-      this.showSalesList = true;
-
-      // emit this out to all components
-      this.salesLeadService.salesLeadPostSuccessful.emit(true);
-    });
-  }
 }
