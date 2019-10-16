@@ -10,6 +10,7 @@
     </li>
     <!-- Sales leads -->
     <li class="breadcrumbs__item">
+      <!-- Shows as link if list is not currently selected -->
       <a 
         class="breadcrumbs__link" 
         href="#"
@@ -17,6 +18,7 @@
         *ngIf="!listSelected">
         Sales leads
       </a>
+      <!-- Shows as non-link if list is currently selected -->
       <span 
         class="breadcrumbs__last"
         *ngIf="listSelected">
@@ -24,6 +26,7 @@
       </span>
     </li>
     <!-- Add sales lead -->
+    <!-- Shows if list is not currently selected -->
     <li 
       class="breadcrumbs__item"
       *ngIf="!listSelected">
