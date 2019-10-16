@@ -8,6 +8,7 @@
         (ngSubmit)="onSubmit()">
     
     <!-- Lead name -->
+    <!-- NOTE: submitAttempted && f.[INPUT NAME].errors because label would be get is-invalid and turn red without both checks -->
     <div class="input-container">
       <label 
         for="i0" 
@@ -24,6 +25,7 @@
 
       <!-- Error message -->
       <div *ngIf="submitAttempted && f.leadName.errors" class="invalid-feedback">
+        <!-- Blank input -->
         <div *ngIf="f.leadName.errors.required">
           Full Name is required
         </div>
@@ -47,6 +49,7 @@
 
       <!-- Error message -->
       <div *ngIf="submitAttempted && f.salesRep.errors" class="invalid-feedback">
+        <!-- Blank input -->
         <div *ngIf="f.salesRep.errors.required">
           Sales representative is required
         </div>
@@ -70,6 +73,7 @@
 
       <!-- Error message -->
       <div *ngIf="submitAttempted && f.clientName.errors" class="invalid-feedback">
+        <!-- Blank input -->
         <div *ngIf="f.clientName.errors.required">
           Client is required
         </div>
@@ -93,6 +97,7 @@
       
       <!-- Error message -->
       <div *ngIf="submitAttempted && f.leadAmount.errors" class="invalid-feedback">
+        <!-- Blank input -->
         <div *ngIf="f.leadAmount.errors.required">
           Value is required
         </div>
@@ -116,9 +121,11 @@
 
       <!-- Error message -->
       <div *ngIf="submitAttempted && f.leadDate.errors" class="invalid-feedback">
+        <!-- Blank input -->
         <div *ngIf="f.leadDate.errors.required">
           Date is required
         </div>
+        <!-- Filled input but date was not ISO -->
         <div *ngIf="f.leadDate.errors.pattern">
           Date is not ISO (ex: 2019-05-10T16:32:57.000Z)
         </div>
