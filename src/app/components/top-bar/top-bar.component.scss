@@ -1,4 +1,4 @@
-@import "../../../partials/_variables.scss";
+    @import "../../../partials/_variables.scss";
 @import "../../../partials/_mixins.scss";
 
 .top-bar {
@@ -54,6 +54,8 @@
   .time-selector {
     display: flex;
     align-items: center;
+    text-align: center;
+    line-height: 1;
 
     svg {
       width: cRems(20px);
