@@ -9,20 +9,23 @@ import { SalesLeadService } from '@services/sales-lead.service';
 
 export class SalesLeadsPanelComponent implements OnInit {
 
-  // Used to toggle the sales leads list and form
+  // Used to toggle the sales leads list and form states
   showSalesList:boolean = true;
-
+ 
+  // Pass in SalesLeadService
   constructor(private salesLeadService:SalesLeadService) { }
 
   // Component init
   ngOnInit() {
     // Subscribes to when the Sales Leads list is triggered to show
-    this.salesLeadService.showSalesList.subscribe((bool) => {      
+    this.salesLeadService.showSalesList.subscribe((bool) => { 
+      // Used as a flag to change the state on the DOM between the list and the form components     
       this.showSalesList = bool;
     });
 
-    // Subscribes to when a new Sales Leads was sent to the server
-    this.salesLeadService.salesLeadPostSuccessful.subscribe(() => {      
+    // Subscribes to when a new Sales Leads was added to the server
+    this.salesLeadService.salesLeadPostSuccessful.subscribe(() => { 
+      // Automatically send user to the list to see their newly added sales lead     
       this.showSalesList = true;
     });
   }
