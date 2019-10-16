@@ -6,7 +6,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
-// TODO add alias
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { BreadcrumbsComponent } from './components/breadcrumbs/breadcrumbs.component';
