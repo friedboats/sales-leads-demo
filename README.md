@@ -1,27 +1,28 @@
 # Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
+This is a demo that I built for Dynatrace. It generates a list of sales leads based on back end data. It also allows a user to add a new sales lead via a form.
 
-## Development server
+# Requirements
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* √ Use the current major version of Angular
+* √ Follow company design guidelines as outlined in the provided design document
+* √ Create global navigation and side menu
+* √ Create a list of sales leads using live data from the provided REST API endpoint
+  * √ Display all of the available columns
+  * √ Display total count of all records
+* √ Create ability to add sales leads using the provided REST API endpoint
 
-## Code scaffolding
+# Bonus Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* √ Do not use jQuery
+* √ Responsive for tablet and phone
+* √ Utilizing CSS preprocessors
+* √ Form validation
+* √ Error messages
+* Date picker
+* Versioning
+* App routing with extra pages
+* √ Progress loader for requests
+* Use a smart table with sorting and pagination
+* Monitor or deploy the application
+* √ Improve the application in any way
