@@ -34,9 +34,9 @@ export class SalesLeadService {
   }
 
   // Post Sales Lead Observable
-  addSalesLead(data):Observable<any> {
+  addSalesLead(data: SalesLead):Observable<SalesLead[]> {
     const url = this.salesLeadsUrl;
-    return this.http.post<any>(url, data, httpOptions);
+    return this.http.post<SalesLead[]>(url, data, httpOptions);
   }
 
   // Delete Sales Lead Observable
